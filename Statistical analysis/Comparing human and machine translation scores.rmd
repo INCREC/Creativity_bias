@@ -1,0 +1,1259 @@
+---
+title: "Comparing human and machine translation scores"
+author: "Kyo Gerrits"
+date: "Generation date: `r format(Sys.time(), '%b %d, %Y - %H:%M:%S')`"
+output: 
+  html_document:
+    theme: sandstone
+    highlight: pygments
+    toc: true
+    df_print: paged
+    code_folding: show
+    toc_float: 
+      collapsed: false
+      smooth_scroll: true
+    number_sections: true
+---
+# Loading libraries
+```{r}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(tidyverse)
+library(lme4)
+library(ggplot2)
+library(car)
+library(ARTool)
+library(glmmTMB)
+library(DHARMa)
+library(gridExtra)
+library(tidyr)
+library(dplyr)
+library(psych)
+library(tibble)
+library(purrr)
+library(irr)
+library(ggpubr)
+library(cocor)
+library(cluster)
+```
+
+# Human annotations
+## Loading dataframe
+```{r}
+df <- read.csv2("Scores_metrics_and_human_creativity.csv", stringsAsFactors = TRUE)
+```
+
+
+## Exploratory data analysis
+```{r}
+cs_plot <- ggplot(df, aes(x = Modality, y = CS)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  labs(title = "Total CSs per Modality", x = "Modality", y = "Total CSs")
+
+errors_plot <- ggplot(df, aes(x = Modality, y = ErrorPoints)) +
+  geom_bar(stat = "identity", fill = "tomato") +
+  labs(title = "Total Errors per Modality", x = "Modality", y = "Total Errors")
+
+kudos_plot <- ggplot(df, aes(x = Modality, y = Kudos)) +
+  geom_bar(stat = "identity", fill = "forestgreen") +
+  labs(title = "Total Points per Modality", x = "Modality", y = "Total Points")
+
+ci_plot <- ggplot(df, aes(x = Modality, y = C.I.)) +
+  geom_bar(stat = "identity", fill = "purple") +
+  labs(title = "Total Points per Modality", x = "Modality", y = "Total Points")
+
+grid.arrange(cs_plot, errors_plot, kudos_plot, ci_plot, ncol=2)
+```
+
+
+## Analyse relations between human annotations and text variables
+### First per modality
+```{r}
+plot_CS_Mod <-ggplot(df, aes(x = Modality, y = CS)) +
+  geom_boxplot(fill="darkseagreen1") +
+  geom_jitter(width = 0.1) + theme_bw() +
+  theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+plot_ER_Mod <- ggplot(df, aes(x = Modality, y = ErrorPoints)) +
+  geom_boxplot(fill="darkseagreen1") +
+  geom_jitter(width = 0.1) +
+  theme_bw() +
+  theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+plot_CI_Mod <- ggplot(df, aes(x = Modality, y = C.I.)) +
+  geom_boxplot(fill = "darkseagreen1") +
+  geom_jitter(width = 0.1)+ theme_bw()+
+    theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+
+```
+
+```{r}
+kruskal.test(CS ~ Modality, data = df)
+kruskal.test(ErrorPoints ~ Modality, data = df)
+kruskal.test(Kudos ~ Modality, data = df)
+kruskal.test(C.I. ~ Modality, data = df)
+```
+#### Post-hoc tests signifiant results
+
+
+```{r}
+pairwise.wilcox.test(df$CS, df$Modality, p.adjust.method = "holm")
+pairwise.wilcox.test(df$ErrorPoints, df$Modality, p.adjust.method = "holm")
+pairwise.wilcox.test(df$Kudos, df$Modality, p.adjust.method = "holm")
+pairwise.wilcox.test(df$C.I., df$Modality, p.adjust.method = "holm")
+
+```
+
+
+### Then per source language
+
+```{r}
+plot_CS_ST <- ggplot(df, aes(x = ST, y = CS)) +
+  geom_boxplot(fill="darkseagreen1") +
+  geom_jitter(width = 0.1) + theme_bw() +
+    theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+plot_ER_ST <- ggplot(df, aes(x = ST, y = ErrorPoints)) +
+  geom_boxplot(fill="darkseagreen1") +
+  geom_jitter(width = 0.1) + theme_bw() +
+    theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+
+plot_CI_ST <- ggplot(df, aes(x = ST, y = C.I.)) +
+  geom_boxplot(fill = "darkseagreen1") +
+  geom_jitter(width = 0.1)+  theme_bw() +
+    theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+```
+
+```{r}
+wilcox.test(CS ~ ST, data = df)
+wilcox.test(ErrorPoints ~ ST, data = df)
+wilcox.test(Kudos ~ ST, data = df)
+wilcox.test(C.I. ~ ST, data = df)
+```
+
+
+### Thirdly, per target language
+```{r}
+plot_CS_TT <- ggplot(df, aes(x = TT, y = CS)) +
+  geom_boxplot(fill="darkseagreen1") +
+  geom_jitter(width = 0.1) + theme_bw() +
+    theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+
+plot_ER_TT <- ggplot(df, aes(x = TT, y = ErrorPoints)) +
+  geom_boxplot(fill="darkseagreen1") +
+  geom_jitter(width = 0.1) + theme_bw() +
+    theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+
+plot_CI_TT <- ggplot(df, aes(x = TT, y = C.I.)) +
+  geom_boxplot(fill = "darkseagreen1") +
+  geom_jitter(width = 0.1) +theme_bw() +
+    theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+```
+
+```{r}
+wilcox.test(CS ~ TT, data = df)
+wilcox.test(ErrorPoints ~ TT, data = df)
+wilcox.test(Kudos ~ TT, data = df)
+wilcox.test(C.I. ~ TT, data = df)
+```
+### Fourthly, per language combination
+```{r}
+plot_CS_LP<- ggplot(df, aes(x = Language_pair, y = CS)) +
+  geom_boxplot(fill="darkseagreen1") +
+  geom_jitter(width = 0.1) + theme_bw() +
+    theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+
+plot_ER_LP <- ggplot(df, aes(x = Language_pair, y = ErrorPoints)) +
+  geom_boxplot(fill="darkseagreen1") +
+  geom_jitter(width = 0.1) + theme_bw() +
+    theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+
+
+plot_CI_LP <- ggplot(df, aes(x = Language_pair, y = C.I.)) +
+  geom_boxplot(fill = "darkseagreen1") +
+  geom_jitter(width = 0.1) + theme_bw() +
+    theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+```
+
+```{r}
+kruskal.test(CS ~ Language_pair, data = df)
+kruskal.test(ErrorPoints ~ Language_pair, data = df)
+kruskal.test(Kudos ~ Language_pair, data = df)
+kruskal.test(C.I. ~ Language_pair, data = df)
+```
+
+### Lastly, per genre
+```{r}
+plot_CS_genre <- ggplot(df, aes(x = Genre, y = CS)) +
+  geom_boxplot(fill="darkseagreen1") +
+  geom_jitter(width = 0.1) + theme_bw() +
+    theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+
+plot_ER_genre <- ggplot(df, aes(x = Genre, y = ErrorPoints)) +
+  geom_boxplot(fill="darkseagreen1") +
+  geom_jitter(width = 0.1) + theme_bw() +
+    theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+
+plot_CI_genre <- ggplot(df, aes(x = Genre, y = C.I.)) +
+  geom_boxplot(fill = "darkseagreen1") +
+  geom_jitter(width = 0.1) +theme_bw() +
+    theme(
+  axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.x  = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+```
+
+```{r}
+kruskal.test(CS ~ Genre, data = df)
+kruskal.test(ErrorPoints ~ Genre, data = df)
+kruskal.test(Kudos ~ Genre, data = df)
+kruskal.test(C.I. ~ Genre, data = df)
+```
+```{r}
+pairwise.wilcox.test(df$CS, df$Genre, p.adjust.method = "holm")
+
+```
+#### Creating visualisation for the plots
+
+```{r}
+# Create a blank plot for spacing
+blank <- ggplot() + theme_void()
+
+pdf(file="./boxplots_CI_hum.pdf", width = 10, height = 12)
+ggarrange(
+    ggarrange(plot_CI_Mod, plot_CI_ST, blank, nrow = 1,
+        widths = c(1, 1, 0), legend = "none"),
+    ggarrange(plot_CI_TT, plot_CI_LP, blank, nrow = 1,
+        widths = c(1, 1, 0), legend = "none"),
+    ggarrange(blank, plot_CI_genre, blank, nrow = 1,
+        widths = c(0.5, 1, 0.5), legend = "none"),
+    nrow = 3,
+    legend = "none"
+    
+)
+
+pdf(file="./boxplots_new_mod.pdf", width = 10, height = 7)
+ggarrange(
+    ggarrange(plot_ER_Mod, plot_CS_Mod, blank, nrow = 1,
+        widths = c(1, 1, 0), legend = "none"),
+    ggarrange(blank, plot_CI_Mod, blank, nrow = 1,
+        widths = c(0.5, 1, 0.5), legend = "none"),
+    nrow = 2,
+    legend = "none"
+    
+)
+```
+
+```{r}
+pdf(file="./boxplots_new_genre.pdf", width = 10, height = 7)
+ggarrange(
+    ggarrange(plot_ER_genre, plot_CS_genre, blank, nrow = 1,
+        widths = c(1, 1, 0), legend = "none"),
+    ggarrange(blank, plot_CI_genre, blank, nrow = 1,
+        widths = c(0.5, 1, 0.5), legend = "none"),
+    nrow = 2,
+    legend = "none"
+    
+)
+```
+
+```{r}
+
+pdf(file="./boxplots_CS_hum_new.pdf", width = 10, height = 12)
+ggarrange(
+    ggarrange(plot_CS_Mod, plot_CS_ST, blank, nrow = 1,
+        widths = c(1, 1, 0), legend = "none"),
+    ggarrange(plot_CS_TT, plot_CS_LP, blank, nrow = 1,
+        widths = c(1, 1, 0), legend = "none"),
+    ggarrange(blank, plot_CS_genre, blank, nrow = 1,
+        widths = c(0.5, 1, 0.5), legend = "none"),
+    nrow = 3,
+    legend = "none"
+)
+```
+
+```{r}
+
+pdf(file="./boxplots_WE_hum_new.pdf", width = 10, height = 12)
+
+ggarrange(
+    ggarrange(plot_ER_Mod, plot_ER_ST, blank, nrow = 1,
+        widths = c(1, 1, 0), legend = "none"),
+    ggarrange(plot_ER_TT, plot_ER_LP, blank, nrow = 1,
+        widths = c(1, 1, 0), legend = "none"),
+    ggarrange(blank, plot_ER_genre, blank, nrow = 1,
+        widths = c(0.5, 1, 0.5), legend = "none"),
+    nrow = 3,
+    legend = "none"
+)
+
+```
+
+
+
+# Analyse correlation between human and computer scores
+```{r}
+df$ErrorPoints_rev <- -df$ErrorPoints
+df$TER_rev <- -df$TER
+df$MetricX24_rev <- -df$MetricX24
+human_cols  <- c("CS", "ErrorPoints_rev", "C.I.")
+system_cols <- c("BERT.score", "BLEURT", "COMET", "BLEU", "chrF2", "TER_rev", "COMETKiwi", "LiTransProQA", "MetricX24_rev")
+df
+```
+```{r}
+# List of metrics
+metric_cols <- c("BERT.score", "BLEURT", "COMET", "BLEU", "chrF2",
+                 "TER", "COMETKiwi", "LiTransProQA", "MetricX24")
+
+# Convert to long format for the bar metrics
+df_long <- df %>%
+  pivot_longer(
+    cols = all_of(metric_cols),
+    names_to = "Metric",
+    values_to = "Value"
+  )
+
+# Create a combined x-axis label (ggplot can't cluster across 3 variables otherwise)
+df_long <- df_long %>%
+  mutate(
+    Xgroup = interaction(Modality, Language_pair, Genre, sep = "_")
+  )
+
+# Also reshape CI for the line
+df_CI <- df %>%
+  mutate(
+    Xgroup = interaction(Modality, Language_pair, Genre, sep = "_")
+  )
+
+```
+
+## Create heatmap for correlation
+```{r}
+#First create a new dataframe with only MT and PE so there are no missing values
+df_HT <- df %>%
+  filter(!Modality=="HT")
+df_HT <- droplevels(df_HT)
+
+#Create datapoints for the heatmap
+cor_mat <- matrix(
+  nrow = length(human_cols),
+  ncol = length(system_cols),
+  dimnames = list(human_cols, system_cols)
+)
+
+for (h in human_cols) {
+  for (s in system_cols) {
+    cor_mat[h, s] <- cor(df_HT[[h]], df_HT[[s]], method = "spearman")
+  }
+}
+
+cor_df <- cor_mat |>
+  as.data.frame() |>
+  rownames_to_column(var = "human") |>
+  pivot_longer(
+    cols = -human,
+    names_to = "system",
+    values_to = "rho"
+  )
+
+pdf(file="./heatmap_new.pdf", width = 12, height = 6)
+ggplot(cor_df, aes(x = system, y = human, fill = rho)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient2(
+    low = "steelblue",
+    mid = "white",
+    high = "firebrick",
+    midpoint = 0,
+    limits = c(-1, 1)
+  ) +
+  geom_text(aes(label = round(rho, 2)), size = 8) +
+  labs(
+    x = "Automatic system",
+    y = "Human dimension",
+    fill = "Spearman ρ"
+  ) +
+    scale_y_discrete(labels = c("CI", "CS", "Error")) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 20),
+     axis.title.x = element_text(size = 20),
+  axis.title.y = element_text(size = 20),
+  axis.text.y  = element_text(size = 20),
+   legend.title = element_text(size = 20),
+  legend.text  = element_text(size = 20),
+    strip.text = element_text(size = 20),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+  )
+
+
+ 
+```
+
+## Check whether human-computer correlation is higher for certain variables
+```{r}
+group_vars <- c("Modality", "ST", "TT", "Language_pair", "Genre")  # text variables to explore
+human_cols  <- c("CS", "ErrorPoints_rev", "C.I.")
+system_cols <- c("BERT.score", "BLEURT", "COMET", "BLEU", "chrF2", "TER_rev", "COMETKiwi", "LiTransProQA", "MetricX24_rev")
+
+results <- map_df(human_cols, function(h) {
+  map_df(system_cols, function(s) {
+    map_df(group_vars, function(g) {
+      df_HT %>%
+        group_by(.data[[g]]) %>%
+        summarise(
+          rho = cor(.data[[h]], .data[[s]], method = "spearman"),
+          n = n(),
+          .groups = "drop"
+        ) %>%
+        mutate(human_dimension = h, system = s, group_var = g)
+    })
+  })
+})
+
+
+results <- results %>%
+  rename(group_value = group_var)
+
+
+
+range_results <- results %>%
+  group_by(human_dimension, system) %>%
+  summarise(
+    min_rho = min(rho, na.rm = TRUE),
+    max_rho = max(rho, na.rm = TRUE),
+    mean_rho = mean(rho, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+#pdf(file="./cor_range_new.pdf", width = 16, height = 9)
+ggplot(range_results, aes(x = system)) +
+  geom_linerange(aes(ymin = min_rho, ymax = max_rho), size = 1.1, color = "black") +
+  geom_point(aes(y = mean_rho), size = 3, color = "red") +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "black") +
+  coord_flip() +
+  facet_wrap(~ human_dimension, scales = "free_y") +
+  labs(
+    title = "Range of Spearman correlations across text groupings",
+    y = "Correlation (min–max range)",
+    x = "Automatic system"
+  ) +
+  theme_minimal(base_size = 12) +
+theme(
+  axis.title.x = element_text(size = 16),
+  axis.title.y = element_text(size = 16),
+  axis.text.x  = element_text(size = 14),
+  axis.text.y  = element_text(size = 14),
+  plot.title   = element_text(size = 20, face = "bold")  # ← title size here
+)
+
+
+geom_text(aes(y = min_rho, label = round(min_rho, 2)), 
+          nudge_y = -0.03, size = 3)
+
+``` 
+
+
+
+```{r}
+ggplot(results, aes(x = system, y = rho, fill = system)) +
+  geom_boxplot() +
+  scale_fill_brewer(palette = "R3") +   # pastel, readable, friendly
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray40") +
+  coord_flip() +
+  facet_wrap(~ human_dimension) +
+  labs(
+    title = "Distribution of correlations across grouping variables",
+    x = "Automatic system",
+    y = "Spearman correlation"
+  ) +
+  theme_minimal(base_size = 13)
+```
+
+```{R}
+cor_by_modality <- df_HT %>%
+  split(.$Modality) %>%
+  map(~{
+    mat <- matrix(nrow = length(human_cols),
+                  ncol = length(system_cols),
+                  dimnames = list(human_cols, system_cols))
+    
+    for (h in human_cols) {
+      for (s in system_cols) {
+        mat[h, s] <- cor(.x[[h]], .x[[s]], method = "spearman")
+      }
+    }
+    
+    as.data.frame(mat) |>
+      tibble::rownames_to_column("human") |>
+      pivot_longer(-human, names_to="system", values_to="rho")
+  }) |>
+  bind_rows(.id="Modality")
+
+ggplot(cor_by_modality, aes(system, human, fill=rho)) +
+  geom_tile() +
+  facet_wrap(~Modality) +
+  scale_fill_gradient2(limits=c(-1,1)) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{R}
+cor_by_genre <- df_HT %>%
+  split(.$Genre) %>%
+  map(~{
+    mat <- matrix(nrow = length(human_cols),
+                  ncol = length(system_cols),
+                  dimnames = list(human_cols, system_cols))
+    
+    for (h in human_cols) {
+      for (s in system_cols) {
+        mat[h, s] <- cor(.x[[h]], .x[[s]], method = "spearman")
+      }
+    }
+    
+    as.data.frame(mat) |>
+      tibble::rownames_to_column("human") |>
+      pivot_longer(-human, names_to="system", values_to="rho")
+  }) |>
+  bind_rows(.id="Genre")
+
+ggplot(cor_by_genre, aes(system, human, fill=rho)) +
+  geom_tile() +
+  facet_wrap(~Genre) +
+  scale_fill_gradient2(limits=c(-1,1)) +
+  scale_y_discrete(labels = c()) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 14),
+    axis.title.x = element_text(size = 16),
+  axis.title.y = element_text(size = 16),
+    axis.text.y  = element_text(size = 14),
+  plot.title   = element_text(size = 20, face = "bold"),  # ← title size here
+      strip.text = element_text(size = 14),
+   legend.title = element_text(size = 16),
+  legend.text  = element_text(size = 14)
+
+    )
+```
+
+```{r}
+
+pdf(file="./plot_genre_heat.pdf", width = 10, height = 4)
+ggplot(cor_by_genre, aes(system, human, fill=rho)) +
+  geom_tile() +
+  facet_wrap(~Genre) +
+    scale_fill_gradient2(
+    low = "royalblue3",
+    mid = "white",
+    high = "firebrick4",
+    midpoint = 0,
+    limits = c(-1, 1)
+  ) +
+  scale_y_discrete(labels = c("CI", "CS", "Error")) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 14),
+    axis.title.x = element_text(size = 20),
+    axis.title.y = element_text(size = 20),
+    axis.text.y  = element_text(size = 18),
+    plot.title   = element_text(size = 16, face = "bold"),
+    strip.text   = element_text(size = 18),
+    legend.title = element_text(size = 20),
+    legend.text  = element_text(size = 18)
+  )
+
+```
+```{R}
+
+
+cor_by_Language_pair <- df_HT %>%
+  split(.$Language_pair) %>%
+  map(~{
+    mat <- matrix(nrow = length(human_cols),
+                  ncol = length(system_cols),
+                  dimnames = list(human_cols, system_cols))
+    
+    for (h in human_cols) {
+      for (s in system_cols) {
+        mat[h, s] <- cor(.x[[h]], .x[[s]], method = "spearman")
+      }
+    }
+    
+    as.data.frame(mat) |>
+      tibble::rownames_to_column("human") |>
+      pivot_longer(-human, names_to="system", values_to="rho")
+  }) |>
+  bind_rows(.id="Language_pair")
+
+ggplot(cor_by_Language_pair, aes(system, human, fill=rho)) +
+  geom_tile() +
+  facet_wrap(~Language_pair) +
+  scale_fill_gradient2(limits=c(-1,1)) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+```{r}
+cor_by_ST <- df_HT %>%
+  split(.$ST) %>%
+  map(~{
+    mat <- matrix(nrow = length(human_cols),
+                  ncol = length(system_cols),
+                  dimnames = list(human_cols, system_cols))
+    
+    for (h in human_cols) {
+      for (s in system_cols) {
+        mat[h, s] <- cor(.x[[h]], .x[[s]], method = "spearman")
+      }
+    }
+    
+    as.data.frame(mat) |>
+      tibble::rownames_to_column("human") |>
+      pivot_longer(-human, names_to="system", values_to="rho")
+  }) |>
+  bind_rows(.id="ST")
+
+ggplot(cor_by_ST, aes(system, human, fill=rho)) +
+  geom_tile() +
+  facet_wrap(~ST) +
+  scale_fill_gradient2(limits=c(-1,1)) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r}
+cor_by_TT <- df_HT %>%
+  split(.$TT) %>%
+  map(~{
+    mat <- matrix(nrow = length(human_cols),
+                  ncol = length(system_cols),
+                  dimnames = list(human_cols, system_cols))
+    
+    for (h in human_cols) {
+      for (s in system_cols) {
+        mat[h, s] <- cor(.x[[h]], .x[[s]], method = "spearman")
+      }
+    }
+    
+    as.data.frame(mat) |>
+      tibble::rownames_to_column("human") |>
+      pivot_longer(-human, names_to="system", values_to="rho")
+  }) |>
+  bind_rows(.id="TT")
+
+ggplot(cor_by_TT, aes(system, human, fill=rho)) +
+  geom_tile() +
+  facet_wrap(~TT) +
+  scale_fill_gradient2(limits=c(-1,1)) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+
+# Automatic evaluation prompting
+```{r}
+ann <- read.csv2("Overview_error_annotations.csv", stringsAsFactors = TRUE) 
+```
+
+```{r}
+str(ann)
+head(ann)
+tail(ann)
+``` 
+
+```{r}
+table(ann$Whose_error)
+table(ann$Modality, ann$Whose_error)
+table(ann$Modality, ann$Severity)
+table(ann$Whose_error, ann$Severity)
+table(ann$Whose_error, ann$Category_main)
+table(ann$Genre, ann$Whose_error)
+table(ann$ST, ann$Whose_error)
+table(ann$TT, ann$Whose_error)
+```
+
+```{r}
+table(ann$Whose_error, ann$Severity)
+table(ann$Whose_error, ann$Category_main)
+table(ann$Whose_error, ann$Modality)
+table(ann$Whose_error, ann$Genre)
+chisq.test(table(ann$Whose_error, ann$Severity))
+chisq.test(table(ann$Whose_error, ann$Category_main))
+chisq.test(table(ann$Whose_error, ann$Modality))
+chisq.test(table(ann$Whose_error, ann$Genre))
+
+ann %>% 
+  count(Modality, Whose_error) %>%
+  tidyr::pivot_wider(names_from = Whose_error, values_from = n)
+ann %>% 
+  count(Genre, Category_main, Whose_error)
+```
+
+```{r}
+ann_rel <- ann %>%
+  filter(
+    Whose_error %in% c("Human", "AE") |
+      (Whose_error == "Match" & Category_main_match == "Yes")
+  ) %>%
+  droplevels()
+
+ann_rel_sec <-   ann %>%
+  filter(
+    Whose_error %in% c("Human", "AE") |
+      (Whose_error == "Match")
+  ) %>%
+  droplevels()
+
+mod_data <- ann_rel_sec %>%
+  count(Whose_error, Modality) %>% 
+  pivot_wider(names_from = Whose_error, values_from = n, values_fill = 0) %>%
+  pivot_longer(cols = c("Human", "AE", "Match"),
+               names_to = "Annotator",
+               values_to = "Count")
+
+ggplot(mod_data, aes(x = Annotator, y = Modality, fill = Count)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "purple") +
+  labs(title = "Error Distribution by Annotator and Category",
+       x = "Annotator",
+       y = "Error Category") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+
+heat_data <- ann_rel %>%
+  count(Whose_error, Category_main) %>% 
+  pivot_wider(names_from = Whose_error, values_from = n, values_fill = 0) %>%
+  pivot_longer(cols = c("Human", "AE", "Match"),
+               names_to = "Annotator",
+               values_to = "Count")
+
+ggplot(heat_data, aes(x = Annotator, y = Category_main, fill = Count)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "blue") +
+  labs(title = "Error Distribution by Annotator and Category",
+       x = "Annotator",
+       y = "Error Category") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+ann_rel_sev <- ann %>%
+  filter(
+    Whose_error %in% c("Human", "AE") |
+      (Whose_error == "Match" & Severity_match == "Yes")
+  ) %>%
+  droplevels()
+
+heat_prop <- ann_rel %>%
+  count(Whose_error, Category_main) %>% 
+  group_by(Category_main) %>%
+  mutate(Proportion = n / sum(n)) %>%
+  ungroup()
+
+
+ggplot(heat_prop, aes(x = Whose_error, y = Category_main, fill = Proportion)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "darkred") +
+  labs(title = "Proportion Heatmap of Error Detection",
+       x = "Annotator",
+       y = "Error Category") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+ST_prop <- ann_rel_sec %>%
+  count(Whose_error, ST) %>%
+  group_by(ST) %>%
+  mutate(Proportion = n / sum(n)) %>%
+  ungroup()
+
+ggplot(ST_prop, aes(x = Whose_error, y = ST, fill = Proportion)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "yellow") +
+  labs(title = "Proportion Heatmap of Error Detection across Modalities" ,
+       x = "Annotator",
+       y = "Modality") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+mod_prop <- ann_rel_sec %>%
+  count(Whose_error, Modality) %>%
+  group_by(Modality) %>%
+  mutate(Proportion = n / sum(n)) %>%
+  ungroup()
+
+mod_prop2 <- ann_rel_sec %>%
+  count(Whose_error, Modality) %>%
+  group_by(Whose_error) %>%
+  mutate(Proportion = n / sum(n)) %>%
+  ungroup()
+
+ggplot(mod_prop, aes(x = Whose_error, y = Modality, fill = Proportion)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "darkred") +
+  labs(title = "Proportion Heatmap of Error Detection across Modalities" ,
+       x = "Annotator",
+       y = "Modality") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+heat_severity <- ann_rel_sev %>%
+  count(Whose_error, Severity) %>%
+  group_by(Severity) %>%
+  mutate(Proportion = n / sum(n)) %>%
+  ungroup()
+
+
+ggplot(heat_severity, aes(Whose_error, Severity, fill = Proportion)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "darkgreen") +
+  labs(title = "Severity Distribution Across Annotators",
+       x = "Annotator",
+       y = "Severity") +
+  theme_minimal()
+
+heat_genre <- ann %>%
+  count(Whose_error, Genre) %>%
+  group_by(Whose_error) %>%
+  mutate(Proportion = n / sum(n)) %>%
+  ungroup()
+
+ggplot(heat_genre, aes(Whose_error, Genre, fill = Proportion)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "purple") +
+  labs(title = "Annotated Errors by Genre",
+       x = "Annotator",
+       y = "Genre") +
+  theme_minimal()
+
+ann_match <- ann %>% filter(Whose_error == "Match")
+
+heat_agree <- ann_match %>%
+  count(Category_main, Category_main_2)
+
+ggplot(heat_agree, aes(x = Category_main_2, 
+                       y = Category_main, fill = n)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "red") +
+  labs(title = "Human vs AE Agreement Heatmap (Matched Errors)",
+       x = "AE Category",
+       y = "Human Category") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+heat_agree_sev <- ann_match %>%
+  count(Severity, Severity_2)
+
+ggplot(heat_agree_sev, aes(x = Severity_2, 
+                       y = Severity, fill = n)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "red") +
+  labs(title = "Human vs AE Agreement Heatmap (Matched Errors)",
+       x = "AE Severity",
+       y = "Human severity") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r}
+#pdf(file="./plot_heatmap_errors_subcat.pdf", width = 8, height = 6)
+ggplot(heat_prop, aes(x = Whose_error, y = Category_main, fill = Proportion)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "darkred") +
+  labs(title = "Proportion Heatmap of Error Detection",
+       x = "Annotator",
+       y = "Error Category") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 14),
+    axis.title.x = element_text(size = 16),
+    axis.title.y = element_text(size = 16),
+    axis.text.y  = element_text(size = 14),
+    plot.title   = element_text(size = 20, face = "bold"),
+    strip.text   = element_text(size = 14),
+    legend.title = element_text(size = 16),
+    legend.text  = element_text(size = 14)
+  )
+
+#pdf(file="./plot_heatmap_errors_sev.pdf", width = 8, height = 6)
+ggplot(heat_severity, aes(Whose_error, Severity, fill = Proportion)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "darkgreen") +
+  scale_x_discrete(labels = c("GPT", "Human", "Match")) +
+  labs(title = "Severity Distribution Across Annotators",
+       x = "Annotator",
+       y = "Severity") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 14),
+    axis.title.x = element_text(size = 16),
+    axis.title.y = element_text(size = 16),
+    axis.text.y  = element_text(size = 14),
+    plot.title   = element_text(size = 20, face = "bold"),
+    strip.text   = element_text(size = 14),
+    legend.title = element_text(size = 16),
+    legend.text  = element_text(size = 14)
+  )
+
+ann_no_match2 <- ann %>%
+  filter(!Whose_error=="Match")
+ann_no_match <-droplevels(ann_no_match2)
+
+mod_prop3 <-ann_no_match2 %>%
+  count(Whose_error, Modality) %>%
+  group_by(Whose_error) %>%
+  mutate(Proportion = n / sum(n)) %>%
+  ungroup()
+
+    
+#pdf(file="./plot_heatmap_errors_mod.pdf", width = 8, height = 6)
+ggplot(mod_prop3, aes(x = Whose_error, y = Modality, fill = Proportion)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "darkred") +
+  labs(title = "Proportion Heatmap of Error Detection across Modalities" ,
+       x = "Annotator",
+       y = "Modality") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 14),
+    axis.title.x = element_text(size = 16),
+    axis.title.y = element_text(size = 16),
+    axis.text.y  = element_text(size = 14),
+    plot.title   = element_text(size = 20, face = "bold"),
+    strip.text   = element_text(size = 14),
+    legend.title = element_text(size = 16),
+    legend.text  = element_text(size = 14)
+  )
+
+mod_genre3 <-ann_no_match2 %>%
+  count(Whose_error, Genre) %>%
+  group_by(Whose_error) %>%
+  mutate(Proportion = n / sum(n)) %>%
+  ungroup()
+
+    
+#pdf(file="./plot_heatmap_errors_mod.pdf", width = 8, height = 6)
+ggplot(mod_genre3, aes(x = Whose_error, y = Genre, fill = Proportion)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "darkred") +
+  labs(title = "Proportion Heatmap of Error Detection across Modalities" ,
+       x = "Annotator",
+       y = "Modality") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 14),
+    axis.title.x = element_text(size = 16),
+    axis.title.y = element_text(size = 16),
+    axis.text.y  = element_text(size = 14),
+    plot.title   = element_text(size = 20, face = "bold"),
+    strip.text   = element_text(size = 14),
+    legend.title = element_text(size = 16),
+    legend.text  = element_text(size = 14)
+  )
+
+mod_ST3 <-ann_no_match2 %>%
+  count(Whose_error, ST) %>%
+  group_by(ST) %>%
+  mutate(Proportion = n / sum(n)) %>%
+  ungroup()
+
+    
+#pdf(file="./plot_heatmap_errors_mod.pdf", width = 8, height = 6)
+ggplot(mod_prop3, aes(x = Whose_error, y = Modality, fill = Proportion)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "darkred") +
+  labs(title = "Proportion Heatmap of Error Detection across Modalities" ,
+       x = "Annotator",
+       y = "Modality") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 14),
+    axis.title.x = element_text(size = 16),
+    axis.title.y = element_text(size = 16),
+    axis.text.y  = element_text(size = 14),
+    plot.title   = element_text(size = 20, face = "bold"),
+    strip.text   = element_text(size = 14),
+    legend.title = element_text(size = 16),
+    legend.text  = element_text(size = 14)
+  )
+```
+
+```{r}
+ann_no_match <- ann %>%
+  filter(!Whose_error=="Match")
+ann_no_match <-droplevels(ann_no_match)
+  
+ann_no_match
+
+Mod.cont <- cbind (c (+1/3, -2/3, +1/3), c(+0.5, 0, -.5))   # Catalan: +0.5; Dutch: -0.5
+colnames (Mod.cont) <- c ("+HTPE-MT", "+HT-PE")
+contrasts (ann_no_match$Modality) <- Mod.cont
+contrasts (ann_no_match$Modality)
+
+Sev.cont <- cbind (c(+0.5,-.5))   # Catalan: +0.5; Dutch: -0.5
+colnames (Sev.cont) <- c ("+Major, -Minor")
+contrasts (ann_no_match$Severity) <- Sev.cont
+contrasts (ann_no_match$Severity)
+
+Cat.cont <- cbind (c(+1/3, +1/3, -2/3), c(+0.5, -0.5, 0))   # Catalan: +0.5; Dutch: -0.5
+colnames (Cat.cont) <- c ("+AccLing-Style", "+Acc-Ling")
+contrasts (ann_no_match$Category_main) <- Cat.cont
+contrasts (ann_no_match$Category_main)
+
+
+
+Genre.cont <- cbind (c (+1/3, +1/3, -2/3), c(+0.5, -0.5, 0))   # Catalan: +0.5; Dutch: -0.5
+colnames (Genre.cont) <- c ("+High-Low", "+Poem-ShortStory")
+contrasts (ann_no_match$Genre) <- Genre.cont
+contrasts (ann_no_match$Genre)
+
+ann_no_match$Whose_error <- relevel(ann_no_match$Whose_error, ref = "Human")
+
+ann_no_match$Whose_error <- ifelse(ann_no_match$Whose_error == "AE", 1, 0)
+```
+```{r}
+model_GPT <- glm(Whose_error ~ Modality + Genre + ST + TT, family = binomial, data = ann_no_match)
+summary(model_GPT)
+
+vif(model_GPT)
+
+```
+
+# Creativity annotations
+```{r}
+crea_df <- read.csv2("Creativity_annotation_together.csv", stringsAsFactors = TRUE)
+str(crea_df)
+describe(crea_df)
+```
+
+```{r}
+table(crea_df$Simplified, crea_df$Modality)
+table(crea_df$Simplified.1, crea_df$Modality)
+table(crea_df$Simplified.1, crea_df$Genre)
+table(crea_df$Simplified, crea_df$Genre)
+
+prop.table(table(crea_df$Simplified))
+prop.table(table(crea_df$Simplified.1))
+
+``` 
+
+```{r}
+Mod.cont <- cbind (c (+1/3, -2/3, +1/3), c(+0.5, 0, -0.5))   # Catalan: +0.5; Dutch: -0.5
+colnames (Mod.cont) <- c ("+HTPE-MT", "+HT-PE")
+contrasts (crea_df$Modality) <- Mod.cont
+contrasts (crea_df$Modality)
+
+
+Genre.cont <- cbind (c (+1/3, +1/3, -2/3), c(+0.5, -0.5, 0))   # Catalan: +0.5; Dutch: -0.5
+colnames (Genre.cont) <- c ("+High-Low", "+Poem-Thriller")
+contrasts (crea_df$Genre) <- Genre.cont
+contrasts (crea_df$Genre)
+
+TT.cont <- cbind (c (-0.5, +0.5))   # Catalan: +0.5; Dutch: -0.5
+colnames (TT.cont) <- c ("+NL-CA")
+contrasts (crea_df$TT) <- TT.cont
+contrasts (crea_df$TT)
+
+ST.cont <- cbind (c (+0.5, -0.5))   # English: +0.5; Russian: -0.5
+colnames (ST.cont) <- c ("+EN-RU")
+contrasts (crea_df$ST) <- ST.cont
+contrasts (crea_df$ST)
+
+```
+ 
+```{r}
+crea_model <- glm(Match ~ Genre + Modality + ST + TT, family=binomial, data=crea_df)
+summary(crea_model)
+```
+
+```{r}
+crea_df_2only <- crea_df %>% 
+  filter(!Simplified.1=="O")
+droplevels(crea_df_2only)
+
+crea_df_2only$Simplified.1 <- ifelse(crea_df_2only$Simplified.1 == "CS", 1, 0)
+
+Mod.cont <- cbind (c (+1/3, -2/3, +1/3), c(+0.5, 0, -0.5))   # Catalan: +0.5; Dutch: -0.5
+colnames (Mod.cont) <- c ("+HTPE-MT", "+HT-PE")
+contrasts (crea_df_2only$Modality) <- Mod.cont
+contrasts (crea_df_2only$Modality)
+
+
+Genre.cont <- cbind (c (+1/3, +1/3, -2/3), c(+0.5, -0.5, 0))   # Catalan: +0.5; Dutch: -0.5
+colnames (Genre.cont) <- c ("+High-Low", "+Poem-ShortStory")
+contrasts (crea_df_2only$Genre) <- Genre.cont
+contrasts (crea_df_2only$Genre)
+
+TT.cont <- cbind (c (-0.5, +0.5))   # Catalan: +0.5; Dutch: -0.5
+colnames (TT.cont) <- c ("+NL-CA")
+contrasts (crea_df_2only$TT) <- TT.cont
+contrasts (crea_df_2only$TT)
+
+ST.cont <- cbind (c (+0.5, -0.5))   # English: +0.5; Russian: -0.5
+colnames (ST.cont) <- c ("+EN-RU")
+contrasts (crea_df_2only$ST) <- ST.cont
+contrasts (crea_df_2only$ST)
+
+crea_model2 <- glm(Simplified.1 ~ Genre + Modality + ST + TT, family=binomial, data=crea_df_2only)
+summary(crea_model2)
+
+```
+
+
+```{r}
+# basic model with main effects
+m_glm <- glm(Match ~ Modality + ST + TT + Genre, family = binomial, data = crea_df)
+summary(m_glm)
+
+```
+
+
+```{r}
+df_CI <- read.csv2("Creativity_scores_comb.csv", stringsAsFactors = TRUE)
+str(df_CI)
+head(df_CI)
+describe(df_CI)
+```
+
+
+```{r}
+#pdf(file="./plot_scatterplot_CI_new.pdf", width = 8, height = 6)
+ggplot(df_CI, aes(x = CI_GPT, y = CI_Human, color = Modality, shape = Genre)) +
+  geom_point(alpha = 1, size = 3) +
+  geom_smooth(aes(group = Modality), method = "lm", se = FALSE) +
+  geom_smooth(aes(group = 1), method = "lm", se = FALSE, color = "black", linetype = "dashed") +
+  stat_cor(aes(color = Modality, group = Modality), method = "spearman") +
+  stat_cor(aes(x = CI_GPT, y = CI_Human),
+           inherit.aes = FALSE,
+           color = "black",
+           label.x = min(df_CI$CI_GPT),
+           label.y = max(df_CI$CI_Human),
+           method = "spearman") +
+  labs(x = "CI_LLM", y = "CI_professional") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 14),
+    axis.title.x = element_text(size = 20),
+    axis.title.y = element_text(size = 20),
+    axis.text.y  = element_text(size = 20),
+    plot.title   = element_text(size = 20, face = "bold"),
+    strip.text   = element_text(size = 20),
+    legend.title = element_text(size = 20),
+    legend.text  = element_text(size = 20)
+  )
+```
+
+
+```{r}
+ggplot(df_CI, aes(x = CI_GPT, y = CI_Human, color = Modality)) +
+  geom_point(alpha = 1) +
+  geom_text(aes(label = ID), vjust = -0.5, size = 3) +  # Add labels
+  geom_smooth(method = "lm", se = FALSE, color = "lightblue") +
+  theme_minimal() +
+  labs(title = "CS by Trial and Modality") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 14),
+    axis.title.x = element_text(size = 16),
+    axis.title.y = element_text(size = 16),
+    axis.text.y  = element_text(size = 14),
+    plot.title   = element_text(size = 20, face = "bold"),
+    strip.text   = element_text(size = 14),
+    legend.title = element_text(size = 16),
+    legend.text  = element_text(size = 14)
+  )
+```
