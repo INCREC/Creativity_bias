@@ -1,0 +1,173 @@
+[
+  {
+    "line": 1,
+    "source": "Bath",
+    "translation": "Un bany",
+    "model_output_json": {
+      "annotated_translation": "<v0>Un</v0> bany",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  },
+  {
+    "line": 2,
+    "source": "The day is fresh-washed and fair, and there is a smell of tulips and narcissus in the air.",
+    "translation": "El dia és fresc i radiant, i la tulipa i el narcís omplen l’aire fragant.",
+    "model_output_json": {
+      "annotated_translation": "El dia és fresc i radiant, i <v0>la tulipa i el narcís</v0> omplen l’aire fragant.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 3,
+    "source": "The sunshine pours in at the bath-room window and bores through the water in the bath-tub in lathes and planes of greenish-white.",
+    "translation": "El sol entra a doll per la finestra del bany i s’obre pas per la banyera tallant-hi sanefes d’un blanc verdós.",
+    "model_output_json": {
+      "annotated_translation": "El sol entra a doll per la finestra del bany i s’obre pas per <v0></v0> la banyera tallant-hi sanefes d’un blanc verdós.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/omission"
+        }
+      ]
+    }
+  },
+  {
+    "line": 4,
+    "source": "It cleaves the water into flaws like a jewel, and cracks it to bright light.",
+    "translation": "Solca l’aigua amb les imperfeccions d’una joia i hi obre esquerdes d’un fulgor esplendorós.",
+    "model_output_json": {
+      "annotated_translation": "Solca l’aigua amb les imperfeccions d’una joia i hi obre esquerdes d’un fulgor esplendorós.",
+      "errors": []
+    }
+  },
+  {
+    "line": 5,
+    "source": "Little spots of sunshine lie on the surface of the water and dance, dance, and their reflections wobble deliciously over the ceiling;",
+    "translation": "Hi ha tot de centelles surant sobre l’aigua, i ballen i ballen, reflectides al sostre amb un balanceig deliciós;",
+    "model_output_json": {
+      "annotated_translation": "Hi ha tot de centelles<v0></v0> surant sobre l’aigua, i ballen i ballen, reflectides al sostre amb un balanceig deliciós;",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        }
+      ]
+    }
+  },
+  {
+    "line": 6,
+    "source": "a stir of my finger sets them whirring, reeling.",
+    "translation": "d’un gest del meu dit el ball es torna titillant, tremolós.",
+    "model_output_json": {
+      "annotated_translation": "d’un gest del meu dit el ball es torna <v0>titillant, tremolós</v0>.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 7,
+    "source": "I move a foot and the planes of light in the water jar.",
+    "translation": "Moc el peu i les sanefes de llum trontollen.",
+    "model_output_json": {
+      "annotated_translation": "Moc el peu i les sanefes de llum <v0></v0>trontollen.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        }
+      ]
+    }
+  },
+  {
+    "line": 8,
+    "source": "I lie back and laugh, and let the green-white water, the sun-flawed beryl water, flow over me.",
+    "translation": "M’estiro i ric, i deixo fluir sobre meu l’aigua blanca i verdosa, l’aigua de beril macat de sol.",
+    "model_output_json": {
+      "annotated_translation": "M’estiro i ric, i deixo fluir sobre <v0>meu</v0> l’aigua blanca i verdosa, l’aigua de beril macat de sol.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/grammar"
+        }
+      ]
+    }
+  },
+  {
+    "line": 9,
+    "source": "The day is almost too bright to bear, the green water covers me from the too bright day.",
+    "translation": "El dia enlluerna de tan radiant, l’aigua verda em tapa d’aquesta llum tan fulgurant.",
+    "model_output_json": {
+      "annotated_translation": "El dia <v0>enlluerna de tan radiant</v0>, l’aigua verda em tapa d’aquesta llum tan fulgurant.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 10,
+    "source": "I will lie here awhile and play with the water and the sun spots.",
+    "translation": "M’estaré aquí una estona, jugant amb l’aigua i el sol centellejant.",
+    "model_output_json": {
+      "annotated_translation": "<v0>M’estaré</v0> aquí una estona, jugant amb l’aigua i <v1>el sol centellejant</v1>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 11,
+    "source": "The sky is blue and high.",
+    "translation": "El cel és blau i clar.",
+    "model_output_json": {
+      "annotated_translation": "El cel és blau i <v0>clar</v0>.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 12,
+    "source": "A crow flaps by the window, and there is a whiff of tulips and narcissus in the air.",
+    "translation": "Passa un corb esbategant les ales, i hi ha una flaire de tulipa i narcís a l’aire.",
+    "model_output_json": {
+      "annotated_translation": "Passa un corb esbategant les ales<v0></v0>, i hi ha una flaire de <v1>tulipa i narcís</v1> a l’aire.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,195 @@
+[
+  {
+    "line": 1,
+    "source": "Твой дом",
+    "translation": "Je huis",
+    "model_output_json": {
+      "annotated_translation": "Je huis",
+      "errors": []
+    }
+  },
+  {
+    "line": 2,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 3,
+    "source": "Твой дом, не ведая беды, меня встречал и в щеку чмокал. Как будто рыба из воды, сервиз выглядывал из стекол.",
+    "translation": "Je huis, onwetend van verdriet, ontving mij zacht, een wangkus liet. Als vis die plots uit water schiet, glansde het servies door ’t ruitgebied.",
+    "model_output_json": {
+      "annotated_translation": "Je huis, onwetend van verdriet, ontving mij <v0>zacht</v0>, <v1>een wangkus liet</v1>. Als vis die plots uit water schiet, <v2>glansde</v2> het servies door <v3>’t ruitgebied</v3>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Minor",
+          "category": "style/awkward"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "style/awkward"
+        }
+      ]
+    }
+  },
+  {
+    "line": 4,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 5,
+    "source": "И пес выскакивал ко мне, как галка маленький, орущий, и в беззащитном всеоружьи торчали кактусы в окне.",
+    "translation": "De hond sprong op me af zo blij, als kauwtje, schril en driftig vrij, en weerloos, maar in wapenrust, stond in het raam de cactus, bewust.",
+    "model_output_json": {
+      "annotated_translation": "De hond sprong op me af <v0>zo blij</v0>, als kauwtje,<v1></v1> schril en driftig <v2>vrij</v2>, en weerloos, maar in wapenrust, <v3>stond</v3> in het raam <v4>de cactus</v4>, <v5>bewust</v5>.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  },
+  {
+    "line": 6,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 7,
+    "source": "От неурядиц всей земли я шла озябшим делегатом, и дом смотрел в глаза мои и добрым был и деликатным.",
+    "translation": "Van wereldleed, van ramp en strijd kwam ik, een afgekoelde gezant, en ’t huis keek diep mijn ogen in, was vriendelijk, was elegant.",
+    "model_output_json": {
+      "annotated_translation": "Van wereldleed, van <v0>ramp en strijd</v0> kwam ik, een <v1>afgekoelde</v1> gezant, en ’t huis keek diep mijn ogen in, was vriendelijk, was <v2>elegant</v2>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 8,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 9,
+    "source": "На голову мою стыда он не навлек, себя не выдал. Дом клялся мне, что никогда он этой женщины не видел.",
+    "translation": "Geen schande wierp het op mijn hoofd, het zweeg, zijn trouw was ongekloofd. Het zwoer mij: “Nooit, bij licht of nacht, heb ik die vrouw ooit gezien, gedacht.”",
+    "model_output_json": {
+      "annotated_translation": "Geen schande wierp <v0>het</v0> op mijn hoofd, <v1>het zweeg</v1>, <v2>zijn trouw was ongekloofd</v2>. Het <v3></v3> zwoer mij: “Nooit, <v4>bij licht of nacht,</v4> heb ik die vrouw ooit gezien, <v5>gedacht</v5>.”",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  },
+  {
+    "line": 10,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 11,
+    "source": "Он говорил: — Я пуст, Я пуст. — Я говорила: — Где-то, где-то… — Он говорил: — И пусть. И пусть. Входи и позабудь про это.",
+    "translation": "Het zei: “Ik leeg. Ik leeg. Ik leeg.” Ik zei: “Ergens… misschien, misschien…” Het zei: “En laat het dan maar zo. Kom binnen, vergeet wat was, en leef.”",
+    "model_output_json": {
+      "annotated_translation": "<v0>Het</v0> zei: “<v1>Ik leeg</v1>. <v2>Ik leeg</v2>. <v3>Ik leeg</v3>.” Ik zei: “Ergens… <v4>misschien, misschien</v4>…” <v5>Het</v5> zei: “En laat het dan maar zo. Kom binnen, vergeet wat was, <v6>en leef</v6>.”",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "fluency/grammar"
+        },
+        {
+          "severity": "Major",
+          "category": "fluency/grammar"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,248 @@
+[
+  {
+    "line": 1,
+    "source": "Afternoon in Summer",
+    "translation": "Middag in de zomer",
+    "model_output_json": {
+      "annotated_translation": "Middag in de zomer",
+      "errors": []
+    }
+  },
+  {
+    "line": 2,
+    "source": "He became aware that Sally had emerged from her book and was about to say something.",
+    "translation": "Hij merkte dat Sally uit haar boek tevoorschijn was gekomen en aanstalten maakte om iets te zeggen.",
+    "model_output_json": {
+      "annotated_translation": "Hij merkte dat Sally uit haar boek tevoorschijn was gekomen en aanstalten maakte om iets te zeggen.",
+      "errors": []
+    }
+  },
+  {
+    "line": 3,
+    "source": "“Murder is an occupational risk for prostitutes.”",
+    "translation": "‘Vermoord worden is een beroepsrisico voor prostituees.’",
+    "model_output_json": {
+      "annotated_translation": "‘Vermoord worden is een beroepsrisico voor prostituees.’",
+      "errors": []
+    }
+  },
+  {
+    "line": 4,
+    "source": "“Hmm,” said he, clinging to the thread of his calculations.",
+    "translation": "‘Hmm,’ antwoordde hij.",
+    "model_output_json": {
+      "annotated_translation": "‘Hmm,’ antwoordde hij.",
+      "errors": []
+    }
+  },
+  {
+    "line": 5,
+    "source": "They grew so engrossing that when next she spoke it took him by surprise.",
+    "translation": "Zo ingespannen probeerde hij de draad van zijn berekeningen te volgen dat hij opschrok toen ze weer wat zei:",
+    "model_output_json": {
+      "annotated_translation": "<v0>Zo ingespannen</v0> probeerde hij de draad van zijn berekeningen te volgen dat hij opschrok toen ze weer wat zei:",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 6,
+    "source": "“And for wives, too—though not so much.”",
+    "translation": "‘En voor echtgenotes ook, al is het minder.’",
+    "model_output_json": {
+      "annotated_translation": "‘En voor echtgenotes ook, al is het minder.’",
+      "errors": []
+    }
+  },
+  {
+    "line": 7,
+    "source": "Inwardly assenting, Willie asked,",
+    "translation": "Stilzwijgend moest Willie dat beamen.",
+    "model_output_json": {
+      "annotated_translation": "Stilzwijgend <v0>moest</v0> Willie dat beamen.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  },
+  {
+    "line": 8,
+    "source": "“What on earth are you reading now?”",
+    "translation": "‘Wat ben je in hemelsnaam aan het lezen?’ vroeg hij.",
+    "model_output_json": {
+      "annotated_translation": "‘Wat ben je in hemelsnaam aan het lezen?’ vroeg hij.",
+      "errors": []
+    }
+  },
+  {
+    "line": 9,
+    "source": "“A book about all the murders committed in the last thirty years.",
+    "translation": "‘Een boek over allerhande moorden van de afgelopen dertig jaar.",
+    "model_output_json": {
+      "annotated_translation": "‘Een boek over <v0>allerhande</v0> moorden van de afgelopen dertig jaar.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 10,
+    "source": "I got it from the public library.”",
+    "translation": "Geleend uit de bibliotheek.’",
+    "model_output_json": {
+      "annotated_translation": "Geleend <v2>uit</v2> de <v0></v0>bibliotheek.<v1>’</v1>",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Minor",
+          "category": "fluency/punctuation"
+        },
+        {
+          "severity": "Minor",
+          "category": "style/unidiomatic"
+        }
+      ]
+    }
+  },
+  {
+    "line": 11,
+    "source": "“Is it interesting?”",
+    "translation": "‘Interessant?’",
+    "model_output_json": {
+      "annotated_translation": "‘Interessant?’",
+      "errors": []
+    }
+  },
+  {
+    "line": 12,
+    "source": "“Yes. In rather a stark way.",
+    "translation": "‘Ja. Het is heel kaal.",
+    "model_output_json": {
+      "annotated_translation": "‘Ja. <v0>Het is heel kaal</v0>.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 13,
+    "source": "Just facts and sentences.”",
+    "translation": "Alleen maar feiten en zinnen.’",
+    "model_output_json": {
+      "annotated_translation": "Alleen maar feiten en zinnen<v0></v0>.’",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/punctuation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 14,
+    "source": "“Sounds enthralling.”",
+    "translation": "‘Klinkt betoverend.’",
+    "model_output_json": {
+      "annotated_translation": "‘Klinkt betoverend.’",
+      "errors": []
+    }
+  },
+  {
+    "line": 15,
+    "source": "“But murder is not so much of an occupational risk for murderers.",
+    "translation": "‘Maar vermoord worden is voor moordenaars veel minder een beroepsrisico.",
+    "model_output_json": {
+      "annotated_translation": "‘Maar vermoord worden is voor moordenaars veel minder een beroepsrisiko.",
+      "errors": []
+    }
+  },
+  {
+    "line": 16,
+    "source": "I mean, they mostly aren’t hanged.",
+    "translation": "Ik bedoel, ze worden zelden opgehangen.",
+    "model_output_json": {
+      "annotated_translation": "Ik bedoel, ze worden <v0>zelden</v0> opgehangen.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 17,
+    "source": "Of course, that’s a good thing.”",
+    "translation": "Wat natuurlijk goed is.’",
+    "model_output_json": {
+      "annotated_translation": "Wat natuurlijk goed is<v0>.’</v0>",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/punctuation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 18,
+    "source": "He looked at Sally’s sleek flaxen hair, now bent over her book again.",
+    "translation": "Hij keek naar Sally’s sluike lichtblonde haar dat nu weer over haar boek hing.",
+    "model_output_json": {
+      "annotated_translation": "Hij keek naar Sally’s sluike lichtblonde haar dat nu weer over haar boek hing.",
+      "errors": []
+    }
+  },
+  {
+    "line": 19,
+    "source": "Though he was still young, still a student, he was a year older than she and found her artless sophistications touching.",
+    "translation": "Hoewel hij nog jong was, student, was hij een jaar ouder dan zij en hij vond haar argeloze wijsneuzigheden aandoenlijk.",
+    "model_output_json": {
+      "annotated_translation": "Hoewel hij nog jong was, <v0>student,</v0> was hij een jaar ouder dan zij en hij vond haar argeloze <v1>wijsneuzigheden</v1> aandoenlijk.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "style/awkward"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 20,
+    "source": "It was as though the mental processes beneath that hood of silken hair were as sleek, as smoothly disposed, as childishly combed and clean.",
+    "translation": "Alsof wat er omging onder die zijden capuchon van blonde haren even sluik, even gladgestreken, even kinderlijk gekamd en schoon was.",
+    "model_output_json": {
+      "annotated_translation": "<v0>Alsof</v0> wat er omging onder die zijden capuchon van <v1>blonde</v1> haren even sluik, even gladgestreken, even kinderlijk gekamd en schoon was.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/grammar"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  }
+]

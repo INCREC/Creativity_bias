@@ -1,0 +1,168 @@
+[
+  {
+    "line": 1,
+    "source": "Bath",
+    "translation": "Een bad",
+    "model_output_json": {
+      "annotated_translation": "<v0>Een bad</v0>",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 2,
+    "source": "The day is fresh-washed and fair, and there is a smell of tulips and narcissus in the air.",
+    "translation": "De dag is pas gewassen, helder en fris, en de lucht geurt naar tulpen en narcis.",
+    "model_output_json": {
+      "annotated_translation": "De dag is pas gewassen, helder en fris, en de lucht geurt naar tulpen en <v0>narcis</v0>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 3,
+    "source": "The sunshine pours in at the bath-room window and bores through the water in the bath-tub in lathes and planes of greenish-white.",
+    "translation": "De zon stroomt gul het badkamerraam binnen en boort zich door het water in het bad — in banen en vlakken van groenig wit.",
+    "model_output_json": {
+      "annotated_translation": "De zon stroomt gul het badkamerraam binnen en boort zich door het water in het bad — in banen en vlakken van groenig wit.",
+      "errors": []
+    }
+  },
+  {
+    "line": 4,
+    "source": "It cleaves the water into flaws like a jewel, and cracks it to bright light.",
+    "translation": "Het snijdt het water in barsten als in een edelsteen, en doet het oplichten in flarden licht.",
+    "model_output_json": {
+      "annotated_translation": "Het snijdt het water in <v0>barsten</v0> als in een edelsteen, en doet het oplichten in flarden licht.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 5,
+    "source": "Little spots of sunshine lie on the surface of the water and dance, dance, and their reflections wobble deliciously over the ceiling;",
+    "translation": "Kleine zonnevlekken liggen op het wateroppervlak en dansen, dansen, terwijl hun weerspiegelingen zalig wiebelen over het plafond.",
+    "model_output_json": {
+      "annotated_translation": "Kleine <v0>zonnevlekken</v0> liggen op het wateroppervlak en dansen, dansen, terwijl hun weerspiegelingen zalig wiebelen over het plafond<v1>.</v1>",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "fluency/punctuation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 6,
+    "source": "a stir of my finger sets them whirring, reeling.",
+    "translation": "Een beweging van mijn vinger zet ze aan het tollen, tollen.",
+    "model_output_json": {
+      "annotated_translation": "Een beweging van mijn vinger zet ze aan het tollen, <v0>tollen</v0>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 7,
+    "source": "I move a foot and the planes of light in the water jar.",
+    "translation": "Ik beweeg een voet, en de lichtvlakken in het water schokken uiteen.",
+    "model_output_json": {
+      "annotated_translation": "Ik beweeg een voet, en de lichtvlakken in het water<v0></v0> schokken uiteen.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        }
+      ]
+    }
+  },
+  {
+    "line": 8,
+    "source": "I lie back and laugh, and let the green-white water, the sun-flawed beryl water, flow over me.",
+    "translation": "Ik leun achterover en lach, en laat het groen-witte water — het zongebroken, berylgroen water — over mij heen stromen.",
+    "model_output_json": {
+      "annotated_translation": "Ik leun achterover en lach, en laat het groen-witte water — het <v0>zongebroken</v0>, berylgroen water — over mij heen stromen.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 9,
+    "source": "The day is almost too bright to bear, the green water covers me from the too bright day.",
+    "translation": "De dag is bijna te stralend om te verdragen, het groene water bedekt me tegen de te felle dag.",
+    "model_output_json": {
+      "annotated_translation": "De dag is bijna te stralend om te verdragen, het groene water <v0>bedekt me tegen</v0> de te felle dag.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "style/awkward"
+        }
+      ]
+    }
+  },
+  {
+    "line": 10,
+    "source": "I will lie here awhile and play with the water and the sun spots.",
+    "translation": "Ik blijf hier nog even liggen en speel met het water en de dansende zonnevlekken.",
+    "model_output_json": {
+      "annotated_translation": "Ik blijf hier nog even liggen en speel met het water en de <v0>dansende</v0> zonnevlekken.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  },
+  {
+    "line": 11,
+    "source": "The sky is blue and high.",
+    "translation": "De hemel is hoog en blauw.",
+    "model_output_json": {
+      "annotated_translation": "De hemel is hoog en blauw.",
+      "errors": []
+    }
+  },
+  {
+    "line": 12,
+    "source": "A crow flaps by the window, and there is a whiff of tulips and narcissus in the air.",
+    "translation": "Een kraai flapt langs het raam. En weer: een vleugje tulpen en narcis in de lucht.",
+    "model_output_json": {
+      "annotated_translation": "Een kraai flapt langs het raam. <v0>En weer:</v0> een vleugje tulpen en <v1>narcis</v1> in de lucht.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        }
+      ]
+    }
+  }
+]

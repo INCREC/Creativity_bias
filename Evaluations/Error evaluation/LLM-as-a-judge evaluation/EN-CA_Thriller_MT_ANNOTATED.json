@@ -1,0 +1,107 @@
+[
+  {
+    "line": 1,
+    "source": "A thud. The thud.",
+    "translation": "Un cop. El cop.",
+    "model_output_json": {
+      "annotated_translation": "Un cop. El cop.",
+      "errors": []
+    }
+  },
+  {
+    "line": 2,
+    "source": "I stopped. Stopped moving. Breathing. Thinking.",
+    "translation": "Em vaig aturar. Vaig deixar de moure’m. De respirar. De pensar.",
+    "model_output_json": {
+      "annotated_translation": "Em vaig aturar. Vaig deixar de moure’m. De respirar. De pensar.",
+      "errors": []
+    }
+  },
+  {
+    "line": 3,
+    "source": "All functions seem to shut down to divert resources to my eardrums.",
+    "translation": "Totes les funcions semblaven apagar-se per destinar tots els recursos al meu timpà.",
+    "model_output_json": {
+      "annotated_translation": "Totes les funcions semblaven apagar-se per destinar tots els recursos <v0>al meu timpà</v0>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 4,
+    "source": "Overhead, there was a flurry of footsteps.",
+    "translation": "A dalt, un enrenou de passes.",
+    "model_output_json": {
+      "annotated_translation": "A dalt, un enrenou de passes.",
+      "errors": []
+    }
+  },
+  {
+    "line": 5,
+    "source": "Someone on the second floor was running at a nauseating, inhuman speed.",
+    "translation": "Algú al segon pis corria amb una velocitat nauseabunda, inhumana.",
+    "model_output_json": {
+      "annotated_translation": "Algú al segon pis corria amb una velocitat nauseabunda, inhumana.",
+      "errors": []
+    }
+  },
+  {
+    "line": 6,
+    "source": "It was as though a magnet were attached to the soles of those feet, and the nickel in my scalp dragged me along for the ride—",
+    "translation": "Era com si un imant estigués lligat a la sola d’aquells peus, i el níquel del meu cuir cabellut m’arrossegués amb ell —",
+    "model_output_json": {
+      "annotated_translation": "Era com si un imant estigués lligat a <v0>la sola</v0> d’aquells peus, i el níquel del meu cuir cabellut m’arrossegués amb ell<v1> —</v1>",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "fluency/punctuation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 7,
+    "source": "past the wall of our composites, under the poorly plastered crack in the ceiling, and finally, to the place between the coat closet and the louvered kitchen doors where the footsteps stopped and so did I.",
+    "translation": "més enllà de la paret amb les nostres fotografies de grup, sota l’esquerda mal enguixada del sostre, i finalment fins a l’espai entre l’armari dels abrics i les portes enreixades de la cuina, on les passes es van aturar, i jo amb elles.",
+    "model_output_json": {
+      "annotated_translation": "més enllà de la paret amb les nostres fotografies de grup, sota l’esquerda mal enguixada del sostre, i finalment fins a l’espai entre l’armari dels abrics i les portes <v0>enreixades</v0> de la cuina, on les passes es van aturar, i jo amb elles.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 8,
+    "source": "I was standing in the shadow of the main stairwell, facing the double front doors approximately thirteen feet and two inches in front of me.",
+    "translation": "Jo era a l’ombra de l’escala principal, mirant de cara les portes dobles d’entrada, a tretze peus i dues polzades exactes davant meu.",
+    "model_output_json": {
+      "annotated_translation": "Jo era a l’ombra de l’escala principal, mirant de cara les portes dobles d’entrada, a tretze peus i dues polzades <v0>exactes</v0> davant meu.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 9,
+    "source": "I guessed fifteen feet, but when the detective measured no more than an hour later, I found I’d ever so slightly overshot the distance between us.",
+    "translation": "Jo havia calculat quinze peus, però quan el detectiu ho va mesurar no més d’una hora després, vaig descobrir que havia excedit lleugerament la distància que ens separava.",
+    "model_output_json": {
+      "annotated_translation": "Jo havia calculat quinze peus, però quan el detectiu ho va mesurar no més d’una hora després, vaig descobrir que havia excedit lleugerament la distància que ens separava.",
+      "errors": []
+    }
+  }
+]

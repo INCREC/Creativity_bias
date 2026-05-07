@@ -1,0 +1,248 @@
+[
+  {
+    "line": 1,
+    "source": "Afternoon in Summer",
+    "translation": "Una tarda d’estiu",
+    "model_output_json": {
+      "annotated_translation": "Una tarda d’estiu",
+      "errors": []
+    }
+  },
+  {
+    "line": 2,
+    "source": "He became aware that Sally had emerged from her book and was about to say something.",
+    "translation": "Es va adonar que la Sally havia aixecat el cap del llibre i anava a dir alguna cosa.",
+    "model_output_json": {
+      "annotated_translation": "Es va adonar que la Sally havia aixecat el cap del llibre i anava a dir alguna cosa.",
+      "errors": []
+    }
+  },
+  {
+    "line": 3,
+    "source": "“Murder is an occupational risk for prostitutes.”",
+    "translation": "—Per a les prostitutes, l’assassinat és un risc laboral.",
+    "model_output_json": {
+      "annotated_translation": "—Per a les prostitutes, l’assassinat és un risc laboral.",
+      "errors": []
+    }
+  },
+  {
+    "line": 4,
+    "source": "“Hmm,” said he, clinging to the thread of his calculations.",
+    "translation": "—Hm... —va fer ell, concentrat a no perdre el fil dels seus càlculs.",
+    "model_output_json": {
+      "annotated_translation": "—Hm... —va fer ell, concentrat a no perdre el fil dels seus càlculs.",
+      "errors": []
+    }
+  },
+  {
+    "line": 5,
+    "source": "They grew so engrossing that when next she spoke it took him by surprise.",
+    "translation": "Hi estava tan absort que, quan la Sally va tornar a parlar, el va agafar per sorpresa.",
+    "model_output_json": {
+      "annotated_translation": "Hi estava tan absort que, quan <v0>la Sally</v0> va tornar a parlar, el va agafar per sorpresa.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  },
+  {
+    "line": 6,
+    "source": "“And for wives, too—though not so much.”",
+    "translation": "—I per a les dones casades també... però potser no tant.",
+    "model_output_json": {
+      "annotated_translation": "—I per a les dones casades també... però <v0>potser</v0> no tant.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 7,
+    "source": "Inwardly assenting, Willie asked,",
+    "translation": "Donant-li la raó per dins, en Willie preguntà:",
+    "model_output_json": {
+      "annotated_translation": "Donant-li la raó per dins, en Willie preguntà:",
+      "errors": []
+    }
+  },
+  {
+    "line": 8,
+    "source": "“What on earth are you reading now?”",
+    "translation": "—Es pot saber què diantre llegeixes, ara?",
+    "model_output_json": {
+      "annotated_translation": "—Es pot saber què diantre llegeixes, ara?",
+      "errors": []
+    }
+  },
+  {
+    "line": 9,
+    "source": "“A book about all the murders committed in the last thirty years.",
+    "translation": "—Un llibre sobre tots els assassinats comesos en els últims trenta anys.",
+    "model_output_json": {
+      "annotated_translation": "—Un llibre sobre tots els assassinats comesos en els últims trenta anys.",
+      "errors": []
+    }
+  },
+  {
+    "line": 10,
+    "source": "I got it from the public library.”",
+    "translation": "El vaig agafar de la biblioteca.",
+    "model_output_json": {
+      "annotated_translation": "El vaig agafar de la biblioteca<v0></v0>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        }
+      ]
+    }
+  },
+  {
+    "line": 11,
+    "source": "“Is it interesting?”",
+    "translation": "—I és gaire interessant?",
+    "model_output_json": {
+      "annotated_translation": "—<v0>I</v0> és <v1>gaire</v1> interessant?",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/overtranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 12,
+    "source": "“Yes. In rather a stark way.",
+    "translation": "—Sí. Va per feina, per això.",
+    "model_output_json": {
+      "annotated_translation": "—Sí. <v0>Va per feina</v0>, <v1>per això</v1>.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  },
+  {
+    "line": 13,
+    "source": "Just facts and sentences.”",
+    "translation": "Fets i sentències i para de comptar.",
+    "model_output_json": {
+      "annotated_translation": "Fets i <v0>sentències</v0> i para de comptar.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 14,
+    "source": "“Sounds enthralling.”",
+    "translation": "—Sona fascinant.",
+    "model_output_json": {
+      "annotated_translation": "—Sona fascinant.",
+      "errors": []
+    }
+  },
+  {
+    "line": 15,
+    "source": "“But murder is not so much of an occupational risk for murderers.",
+    "translation": "—En canvi, per als assassins no és cap risc laboral, l’assassinat.",
+    "model_output_json": {
+      "annotated_translation": "—En canvi, per als assassins no és <v0>cap</v0> risc laboral<v1>, l’assassinat</v1>.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/overtranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "fluency/punctuation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 16,
+    "source": "I mean, they mostly aren’t hanged.",
+    "translation": "Vull dir que en general no acaben a la forca.",
+    "model_output_json": {
+      "annotated_translation": "Vull dir que en general no acaben a la forca.",
+      "errors": []
+    }
+  },
+  {
+    "line": 17,
+    "source": "Of course, that’s a good thing.”",
+    "translation": "Cosa que està molt bé, esclar.",
+    "model_output_json": {
+      "annotated_translation": "Cosa que està molt bé, esclar.",
+      "errors": []
+    }
+  },
+  {
+    "line": 18,
+    "source": "He looked at Sally’s sleek flaxen hair, now bent over her book again.",
+    "translation": "Va contemplar la cabellera de la Sally, sedosa i rossa com fils d’or, ara de nou acotada sobre el llibre.",
+    "model_output_json": {
+      "annotated_translation": "Va contemplar la cabellera de la Sally, sedosa i rossa <v0>com fils d’or</v0>, ara de nou acotada sobre el llibre.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  },
+  {
+    "line": 19,
+    "source": "Though he was still young, still a student, he was a year older than she and found her artless sophistications touching.",
+    "translation": "Tot i que ell encara era jove, encara era estudiant, també era un any més gran que ella, i aquella lògica tan fresca i directa li arribava al cor.",
+    "model_output_json": {
+      "annotated_translation": "Tot i que ell encara era jove, encara era estudiant, <v0>també</v0> era un any més gran que ella, i <v1>aquella lògica tan fresca i directa</v1> li arribava al cor.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 20,
+    "source": "It was as though the mental processes beneath that hood of silken hair were as sleek, as smoothly disposed, as childishly combed and clean.",
+    "translation": "Era com si els processos mentals amagats sota aquella caputxa de fils de seda fossin tan suaus com la cabellera, tan ben posats, tan nets i clenxinats com els d’una criatura.",
+    "model_output_json": {
+      "annotated_translation": "Era com si els processos mentals amagats sota aquella caputxa de <v0>fils de seda</v0> fossin tan suaus com la cabellera, tan ben posats, tan nets i clenxinats com els d’una criatura.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  }
+]

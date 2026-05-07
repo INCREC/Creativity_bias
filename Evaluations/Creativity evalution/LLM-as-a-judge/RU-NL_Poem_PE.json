@@ -1,0 +1,127 @@
+[
+  {
+    "ucp": "дом, не ведая беды",
+    "ucp_translation": "waar pijn ondenkbaar was",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "встречал и ... чмокал",
+    "ucp_translation": "begroette mij",
+    "annotation": "O"
+  },
+  {
+    "ucp": "чмокал",
+    "ucp_translation": "gastvrij en blij",
+    "annotation": "E"
+  },
+  {
+    "ucp": "Как будто рыба из воды",
+    "ucp_translation": "als vanuit zee",
+    "annotation": "CS (CSA)"
+  },
+  {
+    "ucp": "сервиз выглядывал",
+    "ucp_translation": "glaswerk … bekeek",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "из стекол",
+    "ucp_translation": "vensterglas",
+    "annotation": "R"
+  },
+  {
+    "ucp": "пес выскакивал",
+    "ucp_translation": "(…) sprong me uitbundig tegemoet",
+    "annotation": "R"
+  },
+  {
+    "ucp": "как галка маленький",
+    "ucp_translation": "keffend als een kraai",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "орущий",
+    "ucp_translation": "keffend",
+    "annotation": "CSC"
+  },
+  {
+    "ucp": "и в беззащитном всеоружьи",
+    "ucp_translation": "weerloos … stoere stoet",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "торчали кактусы",
+    "ucp_translation": "in het raam … cacteeën",
+    "annotation": "O"
+  },
+  {
+    "ucp": "неурядиц всей земли",
+    "ucp_translation": "uit 's wereldschaos",
+    "annotation": "R"
+  },
+  {
+    "ucp": "озябшим делегатом",
+    "ucp_translation": "ijskoud, als delegaat",
+    "annotation": "R"
+  },
+  {
+    "ucp": "дом смотрел",
+    "ucp_translation": "zijn aangezicht",
+    "annotation": "E"
+  },
+  {
+    "ucp": "глаза мои",
+    "ucp_translation": "",
+    "annotation": "O"
+  },
+  {
+    "ucp": "добрым был",
+    "ucp_translation": "goed",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "дом...добрым и деликатным",
+    "ucp_translation": "zo goed, zo delicaat",
+    "annotation": "R"
+  },
+  {
+    "ucp": "стыда...не навлек",
+    "ucp_translation": "gesmaad en van haar eer beroofd",
+    "annotation": "E"
+  },
+  {
+    "ucp": "себя не выдал",
+    "ucp_translation": "in stilte",
+    "annotation": "E"
+  },
+  {
+    "ucp": "дом клялся",
+    "ucp_translation": "zwoer het",
+    "annotation": "O"
+  },
+  {
+    "ucp": "этой женщины не видел",
+    "ucp_translation": "of zelfs gezien",
+    "annotation": "E"
+  },
+  {
+    "ucp": "я пуст, я пуст",
+    "ucp_translation": "ik ben zo leeg, zo leeg",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "Где-то, где-то",
+    "ucp_translation": "Maar ergens, iets",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "и пусть и пусть",
+    "ucp_translation": "Toen deed ik wat het vroeg",
+    "annotation": "E"
+  },
+  {
+    "ucp": "позабудь",
+    "ucp_translation": "vergeet, vergeet wat is geweest",
+    "annotation": "CSM"
+  }
+]

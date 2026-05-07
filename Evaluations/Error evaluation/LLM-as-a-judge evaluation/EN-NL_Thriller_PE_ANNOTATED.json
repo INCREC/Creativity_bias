@@ -1,0 +1,124 @@
+[
+  {
+    "line": 1,
+    "source": "A thud. The thud.",
+    "translation": "Een dreun. Dé dreun.",
+    "model_output_json": {
+      "annotated_translation": "Een dreun. Dé dreun.",
+      "errors": []
+    }
+  },
+  {
+    "line": 2,
+    "source": "I stopped. Stopped moving. Breathing. Thinking.",
+    "translation": "Ik stopte. Stopte met bewegen. Met ademen. Met denken.",
+    "model_output_json": {
+      "annotated_translation": "Ik stopte. Stopte met bewegen. Met ademen. Met denken.",
+      "errors": []
+    }
+  },
+  {
+    "line": 3,
+    "source": "All functions seem to shut down to divert resources to my eardrums.",
+    "translation": "Al mijn lichaamsfuncties leken uit te vallen, zodat de vrijgekomen energie zich kon concentreren in mijn trommelvliezen.",
+    "model_output_json": {
+      "annotated_translation": "Al mijn lichaamsfuncties leken uit te vallen, zodat de vrijgekomen energie <v0>zich kon concentreren in</v0> mijn trommelvliezen.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 4,
+    "source": "Overhead, there was a flurry of footsteps.",
+    "translation": "Boven me klonk geroffel van voetstappen.",
+    "model_output_json": {
+      "annotated_translation": "Boven me klonk geroffel van voetstappen.",
+      "errors": []
+    }
+  },
+  {
+    "line": 5,
+    "source": "Someone on the second floor was running at a nauseating, inhuman speed.",
+    "translation": "Iemand op de eerste verdieping rende met een misselijkmakende, onmenselijke snelheid.",
+    "model_output_json": {
+      "annotated_translation": "Iemand op de eerste verdieping rende met een misselijkmakende, onmenselijke snelheid.",
+      "errors": []
+    }
+  },
+  {
+    "line": 6,
+    "source": "It was as though a magnet were attached to the soles of those feet, and the nickel in my scalp dragged me along for the ride—",
+    "translation": "Het was alsof er een magneet aan die voeten vastzat, en het ijzer in mijn bloed me erachteraan trok –",
+    "model_output_json": {
+      "annotated_translation": "Het was alsof er een magneet <v0>aan die voeten</v0> vastzat, en <v1>het ijzer in mijn bloed</v1> me erachteraan trok –",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 7,
+    "source": "past the wall of our composites, under the poorly plastered crack in the ceiling, and finally, to the place between the coat closet and the louvered kitchen doors where the footsteps stopped and so did I.",
+    "translation": "langs de muur met onze groepsfoto’s, onder de slordig dichtgeplamuurde scheur in het plafond, tot aan de plek tussen de halkast en de keukenluiken, waar de voetstappen stopten en ik dus ook.",
+    "model_output_json": {
+      "annotated_translation": "langs de muur met onze <v0>groepsfoto’s</v0>, onder de slordig dichtgeplamuurde scheur in het plafond, tot aan de plek tussen de halkast en de <v1>keukenluiken</v1>, waar de voetstappen stopten en ik dus ook.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 8,
+    "source": "I was standing in the shadow of the main stairwell, facing the double front doors approximately thirteen feet and two inches in front of me.",
+    "translation": "Ik stond in de schaduw van de hoofdtrap, recht tegenover de dubbele voordeur ongeveer vier meter van me vandaan.",
+    "model_output_json": {
+      "annotated_translation": "Ik stond in de schaduw van de <v0>hoofdtrap</v0>, recht tegenover de dubbele voordeur<v1></v1> ongeveer vier meter van me vandaan.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "fluency/punctuation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 9,
+    "source": "I guessed fifteen feet, but when the detective measured no more than an hour later, I found I’d ever so slightly overshot the distance between us.",
+    "translation": "Ik gokte vijf, maar toen de rechercheur het nog geen uur later nakeek, bleek dat ik de afstand tussen ons net iets te groot had ingeschat.",
+    "model_output_json": {
+      "annotated_translation": "Ik gokte <v0>vijf</v0>, maar toen de rechercheur het nog geen uur later <v1>nakeek</v1>, bleek dat ik de afstand tussen ons net iets te groot had ingeschat.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        }
+      ]
+    }
+  }
+]

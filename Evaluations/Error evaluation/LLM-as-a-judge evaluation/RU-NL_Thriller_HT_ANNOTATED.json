@@ -1,0 +1,230 @@
+[
+  {
+    "line": 1,
+    "source": "Егор шел по переходу, все убыстряя и убыстряя шаг.",
+    "translation": "Jegor liep door de voetgangerstunnel, steeds sneller en sneller.",
+    "model_output_json": {
+      "annotated_translation": "Jegor liep door de voetgangerstunnel, steeds sneller en sneller.",
+      "errors": []
+    }
+  },
+  {
+    "line": 2,
+    "source": "Откуда-то лилась музыка, тихая, едва слышная, но удивительно приятная.",
+    "translation": "Ergens vandaan klonk muziek, zacht, nauwelijks hoorbaar, maar verbazingwekkend mooi.",
+    "model_output_json": {
+      "annotated_translation": "Ergens vandaan klonk muziek, zacht, nauwelijks hoorbaar, maar verbazingwekkend mooi.",
+      "errors": []
+    }
+  },
+  {
+    "line": 3,
+    "source": "Тонкое пение флейты, шелест гитарных струн, перезвон ксилофона.",
+    "translation": "De ijle tonen van een fluit, getokkel van gitaarsnaren, getinkel van een xylofoon.",
+    "model_output_json": {
+      "annotated_translation": "De ijle tonen van een fluit, <v0>getokkel</v0> van gitaarsnaren, getinkel van een xylofoon.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 4,
+    "source": "Музыка звала, музыка торопила.",
+    "translation": "De muziek lonkte, maande tot haast.",
+    "model_output_json": {
+      "annotated_translation": "De muziek lonkte, maande tot haast.",
+      "errors": []
+    }
+  },
+  {
+    "line": 5,
+    "source": "Из головы будто выдуло все мысли, он уже почти бежал.",
+    "translation": "Het was alsof alle gedachten uit zijn hoofd waren weggeblazen, hij rende al bijna.",
+    "model_output_json": {
+      "annotated_translation": "Het was alsof alle gedachten uit zijn hoofd waren weggeblazen, hij rende al bijna.",
+      "errors": []
+    }
+  },
+  {
+    "line": 6,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 7,
+    "source": "Музыка звала.",
+    "translation": "De muziek lonkte.",
+    "model_output_json": {
+      "annotated_translation": "De muziek lonkte.",
+      "errors": []
+    }
+  },
+  {
+    "line": 8,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 9,
+    "source": "В нее уже вплетались слова... пока невнятные, слишком тихие, но такие манящие.",
+    "translation": "Er begonnen zich al woorden in te verweven… nog onverstaanbaar, te zacht, maar zo verleidelijk.",
+    "model_output_json": {
+      "annotated_translation": "Er begonnen zich al woorden <v0>in te verweven</v0>… nog onverstaanbaar, te zacht, maar zo verleidelijk.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/grammar"
+        }
+      ]
+    }
+  },
+  {
+    "line": 10,
+    "source": "Мальчик выскочил из перехода, на миг остановился, глотая холодный воздух.",
+    "translation": "De jongen schoot de tunnel uit, bleef een ogenblik stilstaan en zoog gretig de koude lucht op.",
+    "model_output_json": {
+      "annotated_translation": "De jongen schoot de tunnel uit, bleef een ogenblik stilstaan en zoog gretig de koude lucht op.",
+      "errors": []
+    }
+  },
+  {
+    "line": 11,
+    "source": "К остановке как раз подкатывал троллейбус.",
+    "translation": "Juist op dat moment kwam er een trolleybus bij de halte aan.",
+    "model_output_json": {
+      "annotated_translation": "Juist op dat moment kwam er een trolleybus bij de halte aan.",
+      "errors": []
+    }
+  },
+  {
+    "line": 12,
+    "source": "Можно было проехать одну остановку, почти до самого дома...",
+    "translation": "Hij kon één halte meerijden, bijna tot vlak bij zijn flatgebouw…",
+    "model_output_json": {
+      "annotated_translation": "Hij kon één halte meerijden, bijna tot vlak bij zijn flatgebouw…",
+      "errors": []
+    }
+  },
+  {
+    "line": 13,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 14,
+    "source": "Медленно, словно внезапно онемели ноги, мальчик пошел к троллейбусу.",
+    "translation": "Langzaam, alsof zijn benen sliepen, begon de jongen naar de bus te lopen.",
+    "model_output_json": {
+      "annotated_translation": "Langzaam, alsof <v0></v0> zijn benen sliepen, begon de jongen naar <v1>de bus</v1> te lopen.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Major",
+          "category": "terminology"
+        }
+      ]
+    }
+  },
+  {
+    "line": 15,
+    "source": "Несколько секунд тот ждал с открытыми дверями, потом створки сошлись и машина отъехала от остановки.",
+    "translation": "Die bleef een paar seconden met geopende deuren wachten, toen gingen de deuren dicht en reed de bus weg van de halte.",
+    "model_output_json": {
+      "annotated_translation": "Die bleef een paar seconden met geopende deuren wachten, toen gingen de deuren dicht en reed de <v0>bus</v0> weg van de halte.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "terminology/inconsistent"
+        }
+      ]
+    }
+  },
+  {
+    "line": 16,
+    "source": "Егор тупо смотрел вслед,",
+    "translation": "Jegor keek het voertuig wezenloos na,",
+    "model_output_json": {
+      "annotated_translation": "Jegor keek het voertuig wezenloos na,",
+      "errors": []
+    }
+  },
+  {
+    "line": 17,
+    "source": "музыка становилась все громче, заполняла весь мир, от полукружия высотной гостиницы до видневшегося невдалеке «коробка на ножках» — его дома.",
+    "translation": "de muziek werd steeds luider, vulde de hele wereld, van de halve cirkel van het torenhoge hotel tot aan de in de verte zichtbare ‘doos op poten’– zijn flatgebouw.",
+    "model_output_json": {
+      "annotated_translation": "de muziek werd steeds luider, vulde de hele wereld, van de halve cirkel van het torenhoge hotel tot aan de <v0>in de verte</v0> zichtbare ‘doos op poten’<v1>–</v1> zijn <v2>flatgebouw</v2>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "fluency/punctuation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 18,
+    "source": "Музыка предлагала идти пешком.",
+    "translation": "De muziek nodigde uit om te lopen.",
+    "model_output_json": {
+      "annotated_translation": "De muziek nodigde uit om te lopen.",
+      "errors": []
+    }
+  },
+  {
+    "line": 19,
+    "source": "По ярко освещённому проспекту, где до сих пор шло немало людей.",
+    "translation": "Langs de felverlichte boulevard, waar nog steeds aardig wat mensen op de been waren.",
+    "model_output_json": {
+      "annotated_translation": "Langs de felverlichte boulevard, waar nog steeds aardig wat mensen op de been waren.",
+      "errors": []
+    }
+  },
+  {
+    "line": 20,
+    "source": "Всего-то пять минут до подъезда.",
+    "translation": "Het was maar vijf minuten lopen naar de ingang.",
+    "model_output_json": {
+      "annotated_translation": "Het was maar vijf minuten lopen naar de ingang.",
+      "errors": []
+    }
+  },
+  {
+    "line": 21,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 22,
+    "source": "А до музыки — еще меньше...",
+    "translation": "En naar de muziek nog minder…",
+    "model_output_json": {
+      "annotated_translation": "En <v0>naar de muziek</v0> nog minder…",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  }
+]

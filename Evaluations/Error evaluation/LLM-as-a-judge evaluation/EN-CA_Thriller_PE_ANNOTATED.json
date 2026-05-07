@@ -1,0 +1,129 @@
+[
+  {
+    "line": 1,
+    "source": "A thud. The thud.",
+    "translation": "Un cop. El cop.",
+    "model_output_json": {
+      "annotated_translation": "Un cop. El cop.",
+      "errors": []
+    }
+  },
+  {
+    "line": 2,
+    "source": "I stopped. Stopped moving. Breathing. Thinking.",
+    "translation": "Em vaig aturar. Vaig deixar de moure’m. De respirar. De pensar.",
+    "model_output_json": {
+      "annotated_translation": "Em vaig aturar. Vaig deixar de moure’m. De respirar. De pensar.",
+      "errors": []
+    }
+  },
+  {
+    "line": 3,
+    "source": "All functions seem to shut down to divert resources to my eardrums.",
+    "translation": "Totes les funcions semblaven apagar-se per destinar tots els recursos al timpà.",
+    "model_output_json": {
+      "annotated_translation": "Totes les funcions semblaven apagar-se per destinar tots els recursos <v0>al timpà</v0>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 4,
+    "source": "Overhead, there was a flurry of footsteps.",
+    "translation": "A dalt, corredisses.",
+    "model_output_json": {
+      "annotated_translation": "A dalt, <v0>corredisses</v0>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 5,
+    "source": "Someone on the second floor was running at a nauseating, inhuman speed.",
+    "translation": "Algú al segon pis corria amb una velocitat anguniosa, inhumana.",
+    "model_output_json": {
+      "annotated_translation": "Algú al segon pis corria amb una velocitat <v0>anguniosa</v0>, inhumana.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 6,
+    "source": "It was as though a magnet were attached to the soles of those feet, and the nickel in my scalp dragged me along for the ride—",
+    "translation": "Era com si aquells peus duguessin un imant enganxat a la sola que anés arrossegant-me pel níquel que tenia al cuir cabellut,",
+    "model_output_json": {
+      "annotated_translation": "Era com si aquells peus duguessin un imant enganxat <v0>a la sola</v0> <v1>que anés arrossegant-me</v1> pel níquel que tenia al cuir cabellut,",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/grammar"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 7,
+    "source": "past the wall of our composites, under the poorly plastered crack in the ceiling, and finally, to the place between the coat closet and the louvered kitchen doors where the footsteps stopped and so did I.",
+    "translation": "passant de llarg la paret amb totes les nostres fotos, per sota l’esquerda mal enguixada del sostre i fins al punt entre l’armari dels abrics i les portes de llibret de la cuina on les passes finalment es van aturar, i jo també.",
+    "model_output_json": {
+      "annotated_translation": "passant de llarg la paret amb <v0>totes les nostres fotos</v0>, per sota l’esquerda mal enguixada del sostre i fins al punt entre l’armari dels abrics i les <v1>portes de llibret</v1> de la cuina on les passes finalment es van aturar, i jo també.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 8,
+    "source": "I was standing in the shadow of the main stairwell, facing the double front doors approximately thirteen feet and two inches in front of me.",
+    "translation": "Em vaig quedar a l’ombra de l’escala principal, de cara les portes dobles de l’entrada, que eren a uns quatre metres i deu centímetres de mi.",
+    "model_output_json": {
+      "annotated_translation": "<v0>Em vaig quedar</v0> a l’ombra de l’escala principal, de cara<v2></v2> les portes dobles de l’entrada, que eren a uns <v1>quatre metres i deu centímetres</v1> de mi.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "fluency/grammar"
+        }
+      ]
+    }
+  },
+  {
+    "line": 9,
+    "source": "I guessed fifteen feet, but when the detective measured no more than an hour later, I found I’d ever so slightly overshot the distance between us.",
+    "translation": "Jo havia calculat quatre metres i mig però, quan el detectiu ho va mesurar al cap de no més d’una hora, vaig descobrir que havia sobreestimat lleugerament la distància que ens separava.",
+    "model_output_json": {
+      "annotated_translation": "Jo havia calculat quatre metres i mig però, quan el detectiu ho va mesurar al cap de no més d’una hora, vaig descobrir que havia sobreestimat lleugerament la distància que ens separava.",
+      "errors": []
+    }
+  }
+]

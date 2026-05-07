@@ -1,0 +1,280 @@
+[
+  {
+    "line": 1,
+    "source": "Егор шел по переходу, все убыстряя и убыстряя шаг.",
+    "translation": "Jegor liep door de voetgangerstunnel, zijn pas steeds sneller.",
+    "model_output_json": {
+      "annotated_translation": "Jegor liep door de voetgangerstunnel, <v0>zijn pas steeds sneller</v0>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/grammar"
+        }
+      ]
+    }
+  },
+  {
+    "line": 2,
+    "source": "Откуда-то лилась музыка, тихая, едва слышная, но удивительно приятная.",
+    "translation": "Er klonk ergens muziek—zacht, nauwelijks hoorbaar, maar betoverend aangenaam.",
+    "model_output_json": {
+      "annotated_translation": "Er klonk ergens muziek—zacht, nauwelijks hoorbaar, maar betoverend aangenaam.",
+      "errors": []
+    }
+  },
+  {
+    "line": 3,
+    "source": "Тонкое пение флейты, шелест гитарных струн, перезвон ксилофона.",
+    "translation": "Een fluit zong ijl, gitaarsnaren fluisterden, een xylofoon rinkelde dromerig.",
+    "model_output_json": {
+      "annotated_translation": "Een fluit zong ijl, gitaarsnaren fluisterden, een xylofoon rinkelde <v0>dromerig</v0>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  },
+  {
+    "line": 4,
+    "source": "Музыка звала, музыка торопила.",
+    "translation": "De muziek riep. De muziek dreef hem voort.",
+    "model_output_json": {
+      "annotated_translation": "De muziek riep. De muziek dreef hem voort.",
+      "errors": []
+    }
+  },
+  {
+    "line": 5,
+    "source": "Из головы будто выдуло все мысли, он уже почти бежал.",
+    "translation": "Zijn hoofd leek leeggewaaid—hij was bijna aan het rennen.",
+    "model_output_json": {
+      "annotated_translation": "Zijn hoofd leek leeggewaaid—hij was bijna aan het rennen.",
+      "errors": []
+    }
+  },
+  {
+    "line": 6,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 7,
+    "source": "Музыка звала.",
+    "translation": "De muziek riep.",
+    "model_output_json": {
+      "annotated_translation": "De muziek riep.",
+      "errors": []
+    }
+  },
+  {
+    "line": 8,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 9,
+    "source": "В нее уже вплетались слова... пока невнятные, слишком тихие, но такие манящие.",
+    "translation": "Er mengden zich woorden in... nog onsamenhangend, nog te stil om te verstaan, maar onweerstaanbaar verleidelijk.",
+    "model_output_json": {
+      "annotated_translation": "<v0>Er mengden zich woorden in</v0>... nog <v1>onsamenhangend</v1>, nog te stil om te verstaan, maar onweerstaanbaar verleidelijk.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "fluency/grammar"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 10,
+    "source": "Мальчик выскочил из перехода, на миг остановился, глотая холодный воздух.",
+    "translation": "De jongen schoot de tunnel uit, bleef even staan, happend naar de koude lucht.",
+    "model_output_json": {
+      "annotated_translation": "De jongen schoot <v0>de tunnel</v0> uit, bleef even staan, <v1>happend naar de koude lucht</v1>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "terminology"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 11,
+    "source": "К остановке как раз подкатывал троллейбус.",
+    "translation": "Een trolleybus kwam net aanrijden.",
+    "model_output_json": {
+      "annotated_translation": "Een trolleybus kwam net aanrijden.",
+      "errors": []
+    }
+  },
+  {
+    "line": 12,
+    "source": "Можно было проехать одну остановку, почти до самого дома...",
+    "translation": "Eén halte, dan zou hij bijna thuis zijn...",
+    "model_output_json": {
+      "annotated_translation": "Eén halte, dan zou <v0>hij</v0> bijna thuis zijn...",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  },
+  {
+    "line": 13,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 14,
+    "source": "Медленно, словно внезапно онемели ноги, мальчик пошел к троллейбусу.",
+    "translation": "Langzaam, alsof zijn benen ineens verlamd waren, liep hij ernaartoe.",
+    "model_output_json": {
+      "annotated_translation": "Langzaam, alsof zijn benen ineens <v0>verlamd</v0> waren, liep hij ernaartoe<v1></v1>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/omission"
+        }
+      ]
+    }
+  },
+  {
+    "line": 15,
+    "source": "Несколько секунд тот ждал с открытыми дверями, потом створки сошлись и машина отъехала от остановки.",
+    "translation": "De bus wachtte secondenlang met open deuren, toen sloten de kleppen zich en reed hij weg.",
+    "model_output_json": {
+      "annotated_translation": "<v0>De bus</v0> wachtte secondenlang met open deuren, toen sloten de <v1>kleppen</v1> zich en reed hij weg<v2></v2>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "terminology"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        }
+      ]
+    }
+  },
+  {
+    "line": 16,
+    "source": "Егор тупо смотрел вслед,",
+    "translation": "Jegor staarde er doelloos achteraan.",
+    "model_output_json": {
+      "annotated_translation": "Jegor staarde er <v0>doelloos</v0> achteraan.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 17,
+    "source": "музыка становилась все громче, заполняла весь мир, от полукружия высотной гостиницы до видневшегося невдалеке «коробка на ножках» — его дома.",
+    "translation": "De muziek zwol aan, vulde de wereld—van de gebogen gevel van het hoge hotel tot aan het \"doosje op pootjes\" in de verte—zijn huis.",
+    "model_output_json": {
+      "annotated_translation": "De muziek zwol aan<v0></v0>, vulde de<v1></v1> wereld—van <v2>de gebogen gevel</v2> van het hoge hotel tot aan het \"doosje op pootjes\" <v3>in de verte</v3>—zijn huis.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 18,
+    "source": "Музыка предлагала идти пешком.",
+    "translation": "De muziek fluisterde: ga te voet.",
+    "model_output_json": {
+      "annotated_translation": "De muziek fluisterde: ga te voet.",
+      "errors": []
+    }
+  },
+  {
+    "line": 19,
+    "source": "По ярко освещённому проспекту, где до сих пор шло немало людей.",
+    "translation": "Langs de helder verlichte laan, waar nog steeds mensen liepen.",
+    "model_output_json": {
+      "annotated_translation": "Langs de helder verlichte laan, waar nog steeds <v0></v0> mensen liepen.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 20,
+    "source": "Всего-то пять минут до подъезда.",
+    "translation": "Vijf minuten tot de portiek.",
+    "model_output_json": {
+      "annotated_translation": "<v0></v0>Vijf minuten tot de portiek.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        }
+      ]
+    }
+  },
+  {
+    "line": 21,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 22,
+    "source": "А до музыки — еще меньше...",
+    "translation": "En tot de muziek… nog minder.",
+    "model_output_json": {
+      "annotated_translation": "En <v0>tot de muziek</v0>… nog minder.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  }
+]

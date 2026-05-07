@@ -1,0 +1,187 @@
+[
+  {
+    "line": 1,
+    "source": "Твой дом",
+    "translation": "Jouw huis",
+    "model_output_json": {
+      "annotated_translation": "Jouw huis",
+      "errors": []
+    }
+  },
+  {
+    "line": 2,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 3,
+    "source": "Твой дом, не ведая беды, меня встречал и в щеку чмокал. Как будто рыба из воды, сервиз выглядывал из стекол.",
+    "translation": "Jouw huis, waar pijn ondenkbaar was, begroette mij gastvrij en blij – als glaswerk achter vensterglas, als vanuit zee, bekeek het mij.",
+    "model_output_json": {
+      "annotated_translation": "Jouw huis, waar <v0>pijn</v0> ondenkbaar was, begroette mij<v1></v1> gastvrij en blij – als <v2>glaswerk</v2> achter <v3>vensterglas</v3>, als <v4>vanuit zee</v4>, bekeek het mij.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 4,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 5,
+    "source": "И пес выскакивал ко мне, как галка маленький, орущий, и в беззащитном всеоружьи торчали кактусы в окне.",
+    "translation": "Een hondje, keffend als een kraai, sprong me uitbundig tegemoet – en in het raam, weerloos en fraai, cacteeën in een stoere stoet.",
+    "model_output_json": {
+      "annotated_translation": "Een hondje, keffend als een <v0>kraai</v0>, sprong me <v1>uitbundig</v1> tegemoet – en in het raam, weerloos en <v2>fraai</v2>, cacteeën <v3></v3> <v4>in een stoere stoet</v4>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 6,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 7,
+    "source": "От неурядиц всей земли я шла озябшим делегатом, и дом смотрел в глаза мои и добрым был и деликатным.",
+    "translation": "Uit ’s werelds chaos opgericht, ijskoud, kwam ik als delegaat van ver tot voor zijn aangezicht – het was zo goed, zo delicaat.",
+    "model_output_json": {
+      "annotated_translation": "Uit ’s werelds chaos <v0>opgericht</v0>, ijskoud, kwam ik als delegaat <v1>van ver</v1> tot voor <v2>zijn aangezicht</v2> – het was zo goed, zo delicaat.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 8,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 9,
+    "source": "На голову мою стыда он не навлек, себя не выдал. Дом клялся мне, что никогда он этой женщины не видел.",
+    "translation": "‘Nooit,’ zwoer het, ‘nooit heb ik die vrouw gesmaad en van haar eer beroofd of zelfs gezien: ik deed getrouw wat ik in stilte had beloofd.’",
+    "model_output_json": {
+      "annotated_translation": "<v0></v0>‘Nooit,’ zwoer <v1>het</v1>, ‘nooit heb ik die vrouw <v2>gesmaad en van haar eer beroofd</v2> of zelfs gezien: <v3>ik deed getrouw wat ik in stilte had beloofd</v3>.’",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  },
+  {
+    "line": 10,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 11,
+    "source": "Он говорил: — Я пуст, Я пуст. — Я говорила: — Где-то, где-то… — Он говорил: — И пусть. И пусть. Входи и позабудь про это.",
+    "translation": "Het zei: ‘Ik ben zo leeg, zo leeg.’ Ik zei: ‘Maar ergens, iets...’ Toen deed ik wat het vroeg: ik zweeg. ‘Vergeet, vergeet wat is geweest!’",
+    "model_output_json": {
+      "annotated_translation": "<v0>Het</v0> zei: ‘Ik ben zo leeg, zo leeg.’ Ik zei: ‘<v1>Maar</v1> ergens, <v2>iets</v2>...’ <v5></v5> <v3>Toen deed ik wat het vroeg: ik zweeg.</v3> <v6></v6> ‘<v4>Vergeet, vergeet wat is geweest!</v4>’",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,221 @@
+[
+  {
+    "line": 1,
+    "source": "Afternoon in Summer",
+    "translation": "Tarda d’estiu",
+    "model_output_json": {
+      "annotated_translation": "Tarda d’estiu",
+      "errors": []
+    }
+  },
+  {
+    "line": 2,
+    "source": "He became aware that Sally had emerged from her book and was about to say something.",
+    "translation": "Ell s’adonà que la Sally havia sortit del seu llibre i estava a punt de dir alguna cosa.",
+    "model_output_json": {
+      "annotated_translation": "Ell s’adonà que la Sally havia sortit del seu llibre i estava a punt de dir alguna cosa.",
+      "errors": []
+    }
+  },
+  {
+    "line": 3,
+    "source": "“Murder is an occupational risk for prostitutes.”",
+    "translation": "—L’assassinat és un risc professional per a les prostitutes.",
+    "model_output_json": {
+      "annotated_translation": "—L’assassinat és un risc professional per a les prostitutes.",
+      "errors": []
+    }
+  },
+  {
+    "line": 4,
+    "source": "“Hmm,” said he, clinging to the thread of his calculations.",
+    "translation": "—Hmm —féu ell, aferrat encara al fil dels seus càlculs.",
+    "model_output_json": {
+      "annotated_translation": "—Hmm —féu ell, aferrat encara al fil dels seus càlculs.",
+      "errors": []
+    }
+  },
+  {
+    "line": 5,
+    "source": "They grew so engrossing that when next she spoke it took him by surprise.",
+    "translation": "L’absorbien tant, que quan ella tornà a parlar el va sorprendre.",
+    "model_output_json": {
+      "annotated_translation": "L’absorbien tant, que quan ella tornà a parlar el va sorprendre.",
+      "errors": []
+    }
+  },
+  {
+    "line": 6,
+    "source": "“And for wives, too—though not so much.”",
+    "translation": "—I per a les dones casades, també —tot i que menys.",
+    "model_output_json": {
+      "annotated_translation": "<v0>—I</v0> per a les dones casades, també —tot i que <v1>menys</v1>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/punctuation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 7,
+    "source": "Inwardly assenting, Willie asked,",
+    "translation": "Amb una aprovació muda, en Willie preguntà:",
+    "model_output_json": {
+      "annotated_translation": "Amb una <v0>aprovació</v0> muda, en Willie preguntà:",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 8,
+    "source": "“What on earth are you reading now?”",
+    "translation": "—I ara què llegeixes?",
+    "model_output_json": {
+      "annotated_translation": "—I ara què<v0></v0> llegeixes?",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 9,
+    "source": "“A book about all the murders committed in the last thirty years.",
+    "translation": "—Un llibre sobre tots els assassinats comesos en els darrers trenta anys.",
+    "model_output_json": {
+      "annotated_translation": "—Un llibre sobre tots els assassinats comesos en els darrers trenta anys.",
+      "errors": []
+    }
+  },
+  {
+    "line": 10,
+    "source": "I got it from the public library.”",
+    "translation": "L’he tret de la biblioteca pública.",
+    "model_output_json": {
+      "annotated_translation": "L’he tret de la biblioteca pública.",
+      "errors": []
+    }
+  },
+  {
+    "line": 11,
+    "source": "“Is it interesting?”",
+    "translation": "—És interessant?",
+    "model_output_json": {
+      "annotated_translation": "—És interessant?",
+      "errors": []
+    }
+  },
+  {
+    "line": 12,
+    "source": "“Yes. In rather a stark way.",
+    "translation": "—Sí. D’una manera força nua.",
+    "model_output_json": {
+      "annotated_translation": "—Sí. D’una manera força nua.",
+      "errors": []
+    }
+  },
+  {
+    "line": 13,
+    "source": "Just facts and sentences.”",
+    "translation": "Només fets i frases.",
+    "model_output_json": {
+      "annotated_translation": "Només fets i frases.",
+      "errors": []
+    }
+  },
+  {
+    "line": 14,
+    "source": "“Sounds enthralling.”",
+    "translation": "—Sona apassionant.",
+    "model_output_json": {
+      "annotated_translation": "—Sona apassionant.",
+      "errors": []
+    }
+  },
+  {
+    "line": 15,
+    "source": "“But murder is not so much of an occupational risk for murderers.",
+    "translation": "—Però l’assassinat no és gaire un risc professional per als assassins.",
+    "model_output_json": {
+      "annotated_translation": "—Però l’assassinat no és gaire un risc professional per als assassins.",
+      "errors": []
+    }
+  },
+  {
+    "line": 16,
+    "source": "I mean, they mostly aren’t hanged.",
+    "translation": "Vull dir, la majoria no els pengen.",
+    "model_output_json": {
+      "annotated_translation": "Vull dir, la majoria no els pengen.",
+      "errors": []
+    }
+  },
+  {
+    "line": 17,
+    "source": "Of course, that’s a good thing.”",
+    "translation": "És clar que això és bo.",
+    "model_output_json": {
+      "annotated_translation": "És clar que això és bo.<v0></v0>",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/punctuation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 18,
+    "source": "He looked at Sally’s sleek flaxen hair, now bent over her book again.",
+    "translation": "Ell mirà els cabells de lli lluents de la Sally, inclinats de nou damunt del llibre.",
+    "model_output_json": {
+      "annotated_translation": "Ell mirà els cabells de lli lluents de la Sally, inclinats de nou damunt <v0>del llibre</v0>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 19,
+    "source": "Though he was still young, still a student, he was a year older than she and found her artless sophistications touching.",
+    "translation": "Encara era jove, encara estudiant, però un any més gran que ella, i trobava commovedores les seves sofisticacions ingènues.",
+    "model_output_json": {
+      "annotated_translation": "Encara era jove, encara estudiant, però <v0></v0> un any més gran que ella, i trobava commovedores les seves sofisticacions ingènues.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/grammar"
+        }
+      ]
+    }
+  },
+  {
+    "line": 20,
+    "source": "It was as though the mental processes beneath that hood of silken hair were as sleek, as smoothly disposed, as childishly combed and clean.",
+    "translation": "Era com si els processos mentals que s’amagaven sota aquella caputxa de seda fossin tan polits, tan ben ordenats, tan infantilment pentinats i nets.",
+    "model_output_json": {
+      "annotated_translation": "Era com si els processos mentals que s’amagaven sota aquella <v0>caputxa de seda</v0> fossin tan polits, tan ben ordenats, tan infantilment pentinats i nets.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  }
+]

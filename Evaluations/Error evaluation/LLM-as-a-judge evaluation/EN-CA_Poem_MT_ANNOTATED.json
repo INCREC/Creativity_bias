@@ -1,0 +1,153 @@
+[
+  {
+    "line": 1,
+    "source": "Bath",
+    "translation": "Bany",
+    "model_output_json": {
+      "annotated_translation": "<v0>Bany</v0>",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 2,
+    "source": "The day is fresh-washed and fair, and there is a smell of tulips and narcissus in the air.",
+    "translation": "El dia és rentat de nou i clar, i l’aire fa olor de tulipes i narcisos.",
+    "model_output_json": {
+      "annotated_translation": "El dia és <v0>rentat de nou</v0> i clar, i l’aire fa olor de tulipes i narcisos.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 3,
+    "source": "The sunshine pours in at the bath-room window and bores through the water in the bath-tub in lathes and planes of greenish-white.",
+    "translation": "La claror del sol entra a raig per la finestra del bany i forada l’aigua de la banyera en làmines i plans de blanc verdós.",
+    "model_output_json": {
+      "annotated_translation": "La claror del sol entra a raig per la finestra del bany i forada l’aigua de la banyera en làmines i plans de blanc verdós.",
+      "errors": []
+    }
+  },
+  {
+    "line": 4,
+    "source": "It cleaves the water into flaws like a jewel, and cracks it to bright light.",
+    "translation": "L’esberla com un joiell, la clivella i la fa esclatar en llum viva.",
+    "model_output_json": {
+      "annotated_translation": "L’esberla com un joiell, la clivella i la fa esclatar en llum viva.",
+      "errors": []
+    }
+  },
+  {
+    "line": 5,
+    "source": "Little spots of sunshine lie on the surface of the water and dance, dance, and their reflections wobble deliciously over the ceiling;",
+    "translation": "Pètals menuts de sol reposen a la superfície de l’aigua i ballen, ballen, i els seus reflexos tremolen delitós al sostre;",
+    "model_output_json": {
+      "annotated_translation": "<v0>Pètals</v0> menuts de sol reposen a la superfície de l’aigua i ballen, ballen, i els seus reflexos tremolen <v1>delitós</v1> al sostre;",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "fluency/grammar"
+        }
+      ]
+    }
+  },
+  {
+    "line": 6,
+    "source": "a stir of my finger sets them whirring, reeling.",
+    "translation": "amb el lleu moviment d’un dit els faig giravoltar, vacillar.",
+    "model_output_json": {
+      "annotated_translation": "amb el lleu moviment d’un dit els faig giravoltar, vacillar.",
+      "errors": []
+    }
+  },
+  {
+    "line": 7,
+    "source": "I move a foot and the planes of light in the water jar.",
+    "translation": "Moure un peu i els plans de llum dins l’aigua trontollen.",
+    "model_output_json": {
+      "annotated_translation": "<v0>Moure</v0> un peu i els plans de llum dins l’aigua trontollen.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "fluency/grammar"
+        }
+      ]
+    }
+  },
+  {
+    "line": 8,
+    "source": "I lie back and laugh, and let the green-white water, the sun-flawed beryl water, flow over me.",
+    "translation": "Em deixo caure enrere i ric, i deixo que l’aigua verdiblanca, l’aigua d’esmaragda esberlada de sol, em llisqui pel damunt.",
+    "model_output_json": {
+      "annotated_translation": "Em deixo caure enrere i ric, i deixo que l’aigua verdiblanca, l’aigua d’<v0>esmaragda</v0> esberlada de sol, em llisqui pel damunt.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 9,
+    "source": "The day is almost too bright to bear, the green water covers me from the too bright day.",
+    "translation": "El dia és gairebé massa radiant per suportar, l’aigua verda m’amaga de l’excés de llum.",
+    "model_output_json": {
+      "annotated_translation": "El dia és gairebé massa radiant per suportar, l’aigua verda m’amaga de l’excés de llum.",
+      "errors": []
+    }
+  },
+  {
+    "line": 10,
+    "source": "I will lie here awhile and play with the water and the sun spots.",
+    "translation": "Restaré aquí una estona, jugant amb l’aigua i amb les taques de sol.",
+    "model_output_json": {
+      "annotated_translation": "<v0>Restaré</v0> aquí una estona, jugant amb l’aigua i amb les taques de sol.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 11,
+    "source": "The sky is blue and high.",
+    "translation": "El cel és blau i alt.",
+    "model_output_json": {
+      "annotated_translation": "El cel és blau i alt.",
+      "errors": []
+    }
+  },
+  {
+    "line": 12,
+    "source": "A crow flaps by the window, and there is a whiff of tulips and narcissus in the air.",
+    "translation": "Una gralla fueteja l’aire davant la finestra, i encara arriba una flaire de tulipes i narcisos.",
+    "model_output_json": {
+      "annotated_translation": "Una <v0>gralla</v0> fueteja l’aire davant la finestra, i <v1>encara</v1> arriba una flaire de tulipes i narcisos.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  }
+]

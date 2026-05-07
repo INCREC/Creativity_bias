@@ -1,0 +1,149 @@
+[
+  {
+    "line": 1,
+    "source": "Bath",
+    "translation": "Bad",
+    "model_output_json": {
+      "annotated_translation": "<v0>Bad</v0>",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 2,
+    "source": "The day is fresh-washed and fair, and there is a smell of tulips and narcissus in the air.",
+    "translation": "De dag is kraakschoon en licht en er hangt een geur van tulpen en narcissen in de lucht.",
+    "model_output_json": {
+      "annotated_translation": "De dag is kraakschoon en <v0>licht</v0> en er hangt een geur van tulpen en narcissen in de lucht.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 3,
+    "source": "The sunshine pours in at the bath-room window and bores through the water in the bath-tub in lathes and planes of greenish-white.",
+    "translation": "Het zonlicht stroomt door het raam naar binnen en dringt door het water in de badkuip in balken en vlakken van een groenachtig wit.",
+    "model_output_json": {
+      "annotated_translation": "Het zonlicht stroomt door het <v0></v0>raam naar binnen en dringt door het water in de badkuip in <v1>balken</v1> en vlakken van een groenachtig wit.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 4,
+    "source": "It cleaves the water into flaws like a jewel, and cracks it to bright light.",
+    "translation": "Het splijt het water als een edelsteen en breekt het in facetten van helder licht.",
+    "model_output_json": {
+      "annotated_translation": "Het splijt het water als een edelsteen en breekt het in <v0>facetten</v0> van helder licht.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 5,
+    "source": "Little spots of sunshine lie on the surface of the water and dance, dance, and their reflections wobble deliciously over the ceiling;",
+    "translation": "Kleine vlekjes zonlicht liggen op het water en dansen, dansen, en hun spiegelingen wiegelen heerlijk over het plafond;",
+    "model_output_json": {
+      "annotated_translation": "Kleine vlekjes zonlicht liggen op het water en dansen, dansen<v0>,</v0> en hun spiegelingen wiegelen heerlijk over het plafond;",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/punctuation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 6,
+    "source": "a stir of my finger sets them whirring, reeling.",
+    "translation": "ik roer met mijn vinger en ze tollen en zwieren in het rond.",
+    "model_output_json": {
+      "annotated_translation": "<v0>ik</v0> roer met mijn vinger en ze tollen en zwieren in het rond.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/spelling"
+        }
+      ]
+    }
+  },
+  {
+    "line": 7,
+    "source": "I move a foot and the planes of light in the water jar.",
+    "translation": "Ik beweeg een voet en de lichtvlakken in het water worden verstoord.",
+    "model_output_json": {
+      "annotated_translation": "Ik beweeg een voet en de lichtvlakken in het water worden verstoord.",
+      "errors": []
+    }
+  },
+  {
+    "line": 8,
+    "source": "I lie back and laugh, and let the green-white water, the sun-flawed beryl water, flow over me.",
+    "translation": "Ik leun naar achteren en lach, en laat het groenwitte water, het door de zon gefacetteerde berilwater, over me heen stromen.",
+    "model_output_json": {
+      "annotated_translation": "Ik leun naar achteren en lach, en laat het groenwitte water, het <v0>door de zon gefacetteerde</v0> berilwater, over me heen stromen.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 9,
+    "source": "The day is almost too bright to bear, the green water covers me from the too bright day.",
+    "translation": "De dag is bijna te helder om te verdragen, het groene water schermt me af voor de te heldere dag.",
+    "model_output_json": {
+      "annotated_translation": "De dag is bijna te helder om te verdragen, het groene water schermt me af voor de te heldere dag.",
+      "errors": []
+    }
+  },
+  {
+    "line": 10,
+    "source": "I will lie here awhile and play with the water and the sun spots.",
+    "translation": "Ik zal hier nog even blijven liggen en spelen met het water en de zonnevlekjes.",
+    "model_output_json": {
+      "annotated_translation": "Ik zal hier nog even blijven liggen en spelen met het water en de zonnevlekjes.",
+      "errors": []
+    }
+  },
+  {
+    "line": 11,
+    "source": "The sky is blue and high.",
+    "translation": "De hemel is hoog en blauw.",
+    "model_output_json": {
+      "annotated_translation": "De hemel is hoog en blauw.",
+      "errors": []
+    }
+  },
+  {
+    "line": 12,
+    "source": "A crow flaps by the window, and there is a whiff of tulips and narcissus in the air.",
+    "translation": "Een kraai klapwiekt langs het raam en er hangt een zweem van tulpen en narcissen in de lucht.",
+    "model_output_json": {
+      "annotated_translation": "Een kraai klapwiekt langs het raam en er hangt een zweem van tulpen en narcissen in de lucht.",
+      "errors": []
+    }
+  }
+]

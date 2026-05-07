@@ -1,0 +1,102 @@
+[
+  {
+    "ucp": "A thud. The thud.",
+    "ucp_translation": "Een dreun. Dé dreun",
+    "annotation": "R"
+  },
+  {
+    "ucp": "moving. Breathing. Thinking",
+    "ucp_translation": "met bewegen. Met ademen. Met denken",
+    "annotation": "R"
+  },
+  {
+    "ucp": "shut down",
+    "ucp_translation": "uit te vallen",
+    "annotation": "R"
+  },
+  {
+    "ucp": "divert resources",
+    "ucp_translation": "de vrijgekomen energie zich kon concentreren",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "a flurry of footsteps",
+    "ucp_translation": "geroffel van voetstappen",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "second floor",
+    "ucp_translation": "eerste verdieping",
+    "annotation": "R"
+  },
+  {
+    "ucp": "attached",
+    "ucp_translation": "vastzat",
+    "annotation": "R"
+  },
+  {
+    "ucp": "the soles of those feet",
+    "ucp_translation": "die voeten",
+    "annotation": "O"
+  },
+  {
+    "ucp": "nickel in my scalp",
+    "ucp_translation": "het ijzer in mijn bloed",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "dragged me along for the ride",
+    "ucp_translation": "erachteraan trok",
+    "annotation": "O"
+  },
+  {
+    "ucp": "our composites",
+    "ucp_translation": "groepsfoto's",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "poorly plasered crack",
+    "ucp_translation": "de slordig dichtgeplamuurde scheur",
+    "annotation": "R"
+  },
+  {
+    "ucp": "the coat closet",
+    "ucp_translation": "halkast",
+    "annotation": "R"
+  },
+  {
+    "ucp": "the louvered kitchen doors",
+    "ucp_translation": "keukenluiken",
+    "annotation": "R"
+  },
+  {
+    "ucp": "the main stairwell",
+    "ucp_translation": "hoofdtrap",
+    "annotation": "R"
+  },
+  {
+    "ucp": "the double front doors",
+    "ucp_translation": "dubbele voordeur",
+    "annotation": "R"
+  },
+  {
+    "ucp": "thirteen feet and two inches",
+    "ucp_translation": "vier meter",
+    "annotation": "R"
+  },
+  {
+    "ucp": "fifteen feet",
+    "ucp_translation": "vijf",
+    "annotation": "E"
+  },
+  {
+    "ucp": "ever so slightly",
+    "ucp_translation": "net iets",
+    "annotation": "R"
+  },
+  {
+    "ucp": "overshot",
+    "ucp_translation": "te groot had ingeschat",
+    "annotation": "R"
+  }
+]

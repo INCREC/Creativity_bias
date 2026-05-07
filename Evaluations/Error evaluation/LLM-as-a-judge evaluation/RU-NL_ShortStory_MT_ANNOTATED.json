@@ -1,0 +1,163 @@
+[
+  {
+    "line": 1,
+    "source": "Яша Хейн проснулся затемно — гораздо раньше, чем прозвонил будильник, — от странной тишины, заполнявшей его изнутри.",
+    "translation": "Yasha Hein werd wakker vóór zonsopgang—veel eerder dan zijn wekker afging—door een vreemde stilte die hem van binnen vulde.",
+    "model_output_json": {
+      "annotated_translation": "Yasha Hein werd wakker vóór zonsopgang—veel eerder dan zijn wekker afging—door een vreemde stilte die hem <v0>van binnen vulde</v0>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "style/unidiomatic"
+        }
+      ]
+    }
+  },
+  {
+    "line": 2,
+    "source": "Ныли все cуставы и мышцы, болела голова, то и дело накатывала ужасная слабость.",
+    "translation": "Al zijn gewrichten en spieren deden pijn, zijn hoofd bonsde, en er kwamen steeds golven van verschrikkelijke zwakte over hem heen.",
+    "model_output_json": {
+      "annotated_translation": "Al zijn gewrichten en spieren deden pijn, zijn hoofd bonsde, en er kwamen steeds golven van verschrikkelijke zwakte over hem heen.",
+      "errors": []
+    }
+  },
+  {
+    "line": 3,
+    "source": "На градуснике тридцать семь и два — температура, конечно, не то чтобы высокая, но субфебрильная — а это еще хуже.",
+    "translation": "De thermometer gaf 37,2°C aan—geen echte koorts, maar een lichte verhoging—wat zelfs nog erger was.",
+    "model_output_json": {
+      "annotated_translation": "De thermometer gaf 37,2°C aan—geen echte koorts, maar een lichte verhoging—wat zelfs nog erger was.",
+      "errors": []
+    }
+  },
+  {
+    "line": 4,
+    "source": "На ночь Яша выпил две шипучих упсы, на всякий случай закапал нос нафтизином, хотя насморка пока не было, и попросил жену нарисовать ему на груди и спине сеточки из йода — чтобы не начался кашель.",
+    "translation": "De avond ervoor had Yasha twee bruistabletten ingenomen, uit voorzorg neusdruppels met nafazoline gebruikt, hoewel hij nog geen loopneus had, en zijn vrouw gevraagd om jodiumroosters op zijn borst en rug te tekenen—om hoest te voorkomen.",
+    "model_output_json": {
+      "annotated_translation": "<v0>De avond ervoor</v0> had Yasha twee bruistabletten<v1></v1> ingenomen, uit voorzorg neusdruppels met nafazoline gebruikt, hoewel hij nog geen loopneus had, en zijn vrouw gevraagd om jodiumroosters op zijn borst en rug te tekenen—om hoest te voorkomen.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        }
+      ]
+    }
+  },
+  {
+    "line": 5,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 6,
+    "source": "И вот теперь Яша сидел в постели, завернувшись в одеяло, и чувствовал себя отвратительно.",
+    "translation": "En nu zat Yasha in bed, gewikkeld in een deken, en voelde zich vreselijk.",
+    "model_output_json": {
+      "annotated_translation": "En nu zat Yasha in bed, gewikkeld in een deken, en voelde zich vreselijk.",
+      "errors": []
+    }
+  },
+  {
+    "line": 7,
+    "source": "Его грудь и живот — да что там грудь и живот, все тело — словно были наполнены застывшей сладкой ватой.",
+    "translation": "Zijn borst en buik—of beter gezegd, zijn hele lichaam—voelden alsof ze gevuld waren met gestolde zoete suikerspin.",
+    "model_output_json": {
+      "annotated_translation": "Zijn borst en buik—of beter gezegd, zijn hele lichaam—voelden alsof ze gevuld waren met gestolde zoete suikerspin.",
+      "errors": []
+    }
+  },
+  {
+    "line": 8,
+    "source": "Или холодным яблочным желе.",
+    "translation": "Of koud appelgelei.",
+    "model_output_json": {
+      "annotated_translation": "Of <v0>koud</v0> appelgelei.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/grammar"
+        }
+      ]
+    }
+  },
+  {
+    "line": 9,
+    "source": "Но главное — эта тишина…",
+    "translation": "Maar het ergste was... die stilte.",
+    "model_output_json": {
+      "annotated_translation": "Maar <v0>het ergste</v0> was... die stilte.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 10,
+    "source": "Эта странная тишина.",
+    "translation": "Die vreemde stilte.",
+    "model_output_json": {
+      "annotated_translation": "<v0>Die</v0> vreemde stilte.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 11,
+    "source": "Что-то в нем явно разладилось, и разладилось всерьез.",
+    "translation": "Er was duidelijk iets mis in hem, en niet zo’n beetje ook.",
+    "model_output_json": {
+      "annotated_translation": "Er was duidelijk iets mis in hem, en niet zo’n beetje ook.",
+      "errors": []
+    }
+  },
+  {
+    "line": 12,
+    "source": "Теперь нужно было найти ту сломавшуюся шестеренку, которая мешала всему сложному, порой барахлившему, но все же относительно слаженному механизму Яшиного тридцатипятилетнего тела нормально работать, —",
+    "translation": "Hij moest nu het kapotte tandwieltje vinden dat het complexe, soms haperende maar over het algemeen goed functionerende mechanisme van zijn vijfendertigjarige lichaam verstoorde—",
+    "model_output_json": {
+      "annotated_translation": "Hij moest nu het kapotte tandwieltje vinden dat het complexe, soms haperende maar <v0>over het algemeen goed functionerende</v0> mechanisme van <v1>zijn</v1> vijfendertigjarige lichaam verstoorde—",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 13,
+    "source": "найти и устранить неполадку медикаментозными средствами.",
+    "translation": "het vinden en met medicijnen herstellen.",
+    "model_output_json": {
+      "annotated_translation": "<v0>het vinden</v0><v1></v1> en met medicijnen herstellen.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/grammar"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/omission"
+        }
+      ]
+    }
+  }
+]

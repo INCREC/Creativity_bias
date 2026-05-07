@@ -1,0 +1,162 @@
+[
+  {
+    "line": 1,
+    "source": "Яша Хейн проснулся затемно — гораздо раньше, чем прозвонил будильник, — от странной тишины, заполнявшей его изнутри.",
+    "translation": "Jasja Hein werd wakker toen het nog donker was – lang voordat de wekker afliep – van een vreemde stilte die hem van binnenuit vulde.",
+    "model_output_json": {
+      "annotated_translation": "Jasja Hein werd wakker toen het nog donker was – lang voordat de wekker <v0>afliep</v0> – van een vreemde stilte die hem van binnenuit vulde.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/unidiomatic"
+        }
+      ]
+    }
+  },
+  {
+    "line": 2,
+    "source": "Ныли все cуставы и мышцы, болела голова, то и дело накатывала ужасная слабость.",
+    "translation": "Al zijn gewrichten en spieren deden pijn, zijn hoofd bonsde en steeds weer overviel hem een vreselijke zwakte.",
+    "model_output_json": {
+      "annotated_translation": "Al zijn gewrichten en spieren deden pijn, zijn hoofd bonsde en steeds weer overviel hem een vreselijke zwakte.",
+      "errors": []
+    }
+  },
+  {
+    "line": 3,
+    "source": "На градуснике тридцать семь и два — температура, конечно, не то чтобы высокая, но субфебрильная — а это еще хуже.",
+    "translation": "De thermometer gaf zevenendertig komma twee aan – niet meteen hoge koorts, alleen wat verhoging, maar dat was nog erger.",
+    "model_output_json": {
+      "annotated_translation": "De thermometer gaf zevenendertig komma twee aan – niet meteen hoge koorts, alleen wat verhoging, maar dat was nog erger.",
+      "errors": []
+    }
+  },
+  {
+    "line": 4,
+    "source": "На ночь Яша выпил две шипучих упсы, на всякий случай закапал нос нафтизином, хотя насморка пока не было, и попросил жену нарисовать ему на груди и спине сеточки из йода — чтобы не начался кашель.",
+    "translation": "Voor het slapengaan had hij twee paracetamol genomen, voor alle zekerheid druppels in zijn neus gedaan, ook al was hij nog niet verkouden, en zijn vrouw gevraagd om jodium op zijn borst en rug te smeren – om te voorkomen dat hij zou gaan hoesten.",
+    "model_output_json": {
+      "annotated_translation": "Voor het slapengaan had hij twee <v0>paracetamol</v0> genomen, voor alle zekerheid <v1>druppels in zijn neus gedaan</v1>, ook al was hij nog niet <v2>verkouden</v2>, en zijn vrouw gevraagd om jodium op zijn borst en rug te <v3>smeren</v3> – om te voorkomen dat hij zou gaan hoesten.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 5,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 6,
+    "source": "И вот теперь Яша сидел в постели, завернувшись в одеяло, и чувствовал себя отвратительно.",
+    "translation": "En nu zat Jasja in zijn deken gewikkeld in bed en voelde zich beroerd.",
+    "model_output_json": {
+      "annotated_translation": "En nu zat Jasja in <v0>zijn</v0> deken gewikkeld in bed en voelde zich beroerd.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  },
+  {
+    "line": 7,
+    "source": "Его грудь и живот — да что там грудь и живот, все тело — словно были наполнены застывшей сладкой ватой.",
+    "translation": "Zijn borst en buik – nee, zijn hele lijf – leken wel gevuld met gestolde suikerspin.",
+    "model_output_json": {
+      "annotated_translation": "Zijn borst en buik – nee, zijn hele lijf – leken wel gevuld met gestolde suikerspin.",
+      "errors": []
+    }
+  },
+  {
+    "line": 8,
+    "source": "Или холодным яблочным желе.",
+    "translation": "Of met koude appelgelei.",
+    "model_output_json": {
+      "annotated_translation": "Of met koude appelgelei.",
+      "errors": []
+    }
+  },
+  {
+    "line": 9,
+    "source": "Но главное — эта тишина…",
+    "translation": "Maar het ergste was die stilte…",
+    "model_output_json": {
+      "annotated_translation": "Maar <v0>het ergste</v0> <v1>was</v1> die stilte…",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 10,
+    "source": "Эта странная тишина.",
+    "translation": "Die vreemde stilte.",
+    "model_output_json": {
+      "annotated_translation": "<v0>Die</v0> vreemde stilte.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 11,
+    "source": "Что-то в нем явно разладилось, и разладилось всерьез.",
+    "translation": "Er was duidelijk iets ontregeld daarbinnen, en behoorlijk ook.",
+    "model_output_json": {
+      "annotated_translation": "Er was duidelijk iets ontregeld daarbinnen, en behoorlijk ook.",
+      "errors": []
+    }
+  },
+  {
+    "line": 12,
+    "source": "Теперь нужно было найти ту сломавшуюся шестеренку, которая мешала всему сложному, порой барахлившему, но все же относительно слаженному механизму Яшиного тридцатипятилетнего тела нормально работать, —",
+    "translation": "Nu moest hij het kapotte radertje zien te vinden dat verhinderde dat het ingewikkelde, soms haperende, maar alles bij elkaar toch relatief goed werkende mechanisme van zijn vijfendertigjarige lichaam normaal functioneerde –",
+    "model_output_json": {
+      "annotated_translation": "Nu moest hij het kapotte radertje zien te vinden dat verhinderde dat het ingewikkelde, soms haperende, maar alles bij elkaar toch relatief goed werkende mechanisme van <v0>zijn</v0> vijfendertigjarige lichaam normaal functioneerde –",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 13,
+    "source": "найти и устранить неполадку медикаментозными средствами.",
+    "translation": "hij moest het mankement vinden en het met medicamenteuze middelen verhelpen.",
+    "model_output_json": {
+      "annotated_translation": "hij moest het mankement vinden en het met medicamenteuze middelen verhelpen.",
+      "errors": []
+    }
+  }
+]

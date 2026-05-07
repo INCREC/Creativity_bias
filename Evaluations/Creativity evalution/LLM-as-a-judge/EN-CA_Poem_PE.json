@@ -1,0 +1,177 @@
+[
+  {
+    "ucp": "fresh-washed",
+    "ucp_translation": "clar",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "fair",
+    "ucp_translation": "immaculat",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "fair … air",
+    "ucp_translation": "flaire … l'aire",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "there is a smell … in the air",
+    "ucp_translation": "i flaire ... a l’aire.",
+    "annotation": "R"
+  },
+  {
+    "ucp": "pours",
+    "ucp_translation": "a raig",
+    "annotation": "R"
+  },
+  {
+    "ucp": "bores through",
+    "ucp_translation": "perfora",
+    "annotation": "R"
+  },
+  {
+    "ucp": "lathes",
+    "ucp_translation": "làmines",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "lathes and planes",
+    "ucp_translation": "làmines i volutes",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "cleaves",
+    "ucp_translation": "l'esquerda",
+    "annotation": "R"
+  },
+  {
+    "ucp": "flaws",
+    "ucp_translation": "",
+    "annotation": "O"
+  },
+  {
+    "ucp": "cracks it to",
+    "ucp_translation": "clivella",
+    "annotation": "R"
+  },
+  {
+    "ucp": "bright light",
+    "ucp_translation": "centelles de llum",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "little spots of sunshine",
+    "ucp_translation": "tot de volves menudes de sol",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "wobble deliciously",
+    "ucp_translation": "capcinegen delitosament",
+    "annotation": "R"
+  },
+  {
+    "ucp": "whirring",
+    "ucp_translation": "les faig girar",
+    "annotation": "R"
+  },
+  {
+    "ucp": "reeling",
+    "ucp_translation": "s'arremolinen",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "planes of light",
+    "ucp_translation": "làmines de llum",
+    "annotation": "R"
+  },
+  {
+    "ucp": "jar",
+    "ucp_translation": "entrexoquen",
+    "annotation": "E"
+  },
+  {
+    "ucp": "sun-flawed",
+    "ucp_translation": "esquerdada de sol",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "beryl water",
+    "ucp_translation": "l'aigua de brillant o de maragda",
+    "annotation": "E"
+  },
+  {
+    "ucp": "too bright to bear",
+    "ucp_translation": "tan radiant que costa d'aguantar",
+    "annotation": "R"
+  },
+  {
+    "ucp": "covers",
+    "ucp_translation": "em protegeix",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "the sun spots",
+    "ucp_translation": "volvetes de sol",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "flaps",
+    "ucp_translation": "bat les ales",
+    "annotation": "R"
+  },
+  {
+    "ucp": "",
+    "ucp_translation": "",
+    "annotation": "E"
+  },
+  {
+    "ucp": "",
+    "ucp_translation": "",
+    "annotation": "E"
+  },
+  {
+    "ucp": null,
+    "ucp_translation": null,
+    "annotation": null
+  },
+  {
+    "ucp": "",
+    "ucp_translation": "",
+    "annotation": "E"
+  },
+  {
+    "ucp": "",
+    "ucp_translation": "",
+    "annotation": "E"
+  },
+  {
+    "ucp": "",
+    "ucp_translation": "",
+    "annotation": "E"
+  },
+  {
+    "ucp": "",
+    "ucp_translation": "",
+    "annotation": "E"
+  },
+  {
+    "ucp": "",
+    "ucp_translation": "",
+    "annotation": "E"
+  },
+  {
+    "ucp": "",
+    "ucp_translation": "",
+    "annotation": "E"
+  },
+  {
+    "ucp": "",
+    "ucp_translation": "",
+    "annotation": "E"
+  },
+  {
+    "ucp": null,
+    "ucp_translation": null,
+    "annotation": "E"
+  }
+]

@@ -1,0 +1,167 @@
+[
+  {
+    "line": 1,
+    "source": "Твой дом",
+    "translation": "Jouw huis",
+    "model_output_json": {
+      "annotated_translation": "Jouw huis",
+      "errors": []
+    }
+  },
+  {
+    "line": 2,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 3,
+    "source": "Твой дом, не ведая беды, меня встречал и в щеку чмокал. Как будто рыба из воды, сервиз выглядывал из стекол.",
+    "translation": "Jouw huis, zich nergens van bewust, gaf mij bij binnenkomst een kus, en het serviesgoed keek naar buiten als een goudvis door de ruiten.",
+    "model_output_json": {
+      "annotated_translation": "Jouw huis, <v0>zich nergens van bewust</v0>, gaf mij bij binnenkomst een kus<v1></v1>, en het serviesgoed keek naar buiten <v2>als een goudvis</v2> door de ruiten.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 4,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 5,
+    "source": "И пес выскакивал ко мне, как галка маленький, орущий, и в беззащитном всеоружьи торчали кактусы в окне.",
+    "translation": "Een hond kwispelde trouw, ergens krijste er een kauw, en in weerloosheid paraat flankeerden cactussen de straat.",
+    "model_output_json": {
+      "annotated_translation": "Een hond <v0>kwispelde trouw</v0>, <v1>ergens</v1> <v2>krijste er een kauw</v2>, en in weerloosheid paraat <v3>flankeerden cactussen de straat</v3>.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 6,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 7,
+    "source": "От неурядиц всей земли я шла озябшим делегатом, и дом смотрел в глаза мои и добрым был и деликатным.",
+    "translation": "Ik was van onmin de gezant, de kleumende representant: het huis toen keek mij in de ogen, tactvol, vriendelijk, vol mededogen.",
+    "model_output_json": {
+      "annotated_translation": "<v2>Ik was</v2> van <v0>onmin</v0><v1></v1> de gezant, de kleumende representant: het huis toen keek mij in de ogen, tactvol, vriendelijk, <v3>vol mededogen</v3>.",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        }
+      ]
+    }
+  },
+  {
+    "line": 8,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 9,
+    "source": "На голову мою стыда он не навлек, себя не выдал. Дом клялся мне, что никогда он этой женщины не видел.",
+    "translation": "Geen schande en geen bitterheid: ze liet niets merken, geen verwijt, of dat hij haar van vroeger kende, deze geenszins onbekende.",
+    "model_output_json": {
+      "annotated_translation": "Geen schande <v0>en geen bitterheid</v0>: <v1>ze liet niets merken, geen verwijt</v1>, <v2>of dat hij haar van vroeger kende, deze geenszins onbekende</v2>.<v3></v3>",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/omission"
+        }
+      ]
+    }
+  },
+  {
+    "line": 10,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 11,
+    "source": "Он говорил: — Я пуст, Я пуст. — Я говорила: — Где-то, где-то… — Он говорил: — И пусть. И пусть. Входи и позабудь про это.",
+    "translation": "Het huis zei: ‘Leeg, ik ben leeg.’ Ik zei: ‘Maar toch...’ en zweeg. Het huis zei: ‘Ik weet het, ik weet het, maar kom binnen en vergeet het.’",
+    "model_output_json": {
+      "annotated_translation": "<v0>Het huis</v0> zei: ‘Leeg, ik ben leeg.’ Ik zei: ‘<v1>Maar toch...</v1>’ <v2>en zweeg</v2>. <v3>Het huis</v3> zei: ‘<v4>Ik weet het, ik weet het</v4>, maar kom binnen en vergeet het.’",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/addition"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  }
+]

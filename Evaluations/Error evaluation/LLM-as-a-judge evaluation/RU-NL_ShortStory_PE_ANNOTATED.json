@@ -1,0 +1,176 @@
+[
+  {
+    "line": 1,
+    "source": "Яша Хейн проснулся затемно — гораздо раньше, чем прозвонил будильник, — от странной тишины, заполнявшей его изнутри.",
+    "translation": "Jasja Chejn werd nog voor zonsopgang wakker – veel eerder dan de wekker afging – door een merkwaardige stilte binnenin hem.",
+    "model_output_json": {
+      "annotated_translation": "Jasja Chejn werd nog voor zonsopgang wakker – veel eerder dan de wekker afging – door een merkwaardige stilte <v0></v0> binnenin hem.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/undertranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 2,
+    "source": "Ныли все cуставы и мышцы, болела голова, то и дело накатывала ужасная слабость.",
+    "translation": "Hij werd geplaagd door al zijn gewrichten en spieren, hij had hoofdpijn, en hij werd voortdurend door een verschrikkelijke slapte overspoeld.",
+    "model_output_json": {
+      "annotated_translation": "Hij werd geplaagd door al zijn gewrichten en spieren, hij had hoofdpijn, en hij werd voortdurend door een verschrikkelijke <v0>slapte</v0> overspoeld.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 3,
+    "source": "На градуснике тридцать семь и два — температура, конечно, не то чтобы высокая, но субфебрильная — а это еще хуже.",
+    "translation": "De thermometer gaf 37,2 aan, een lichte verhoging, geen hoge koorts, maar – nog erger –subfebriel.",
+    "model_output_json": {
+      "annotated_translation": "De thermometer gaf 37,2 aan, een lichte verhoging, geen hoge koorts, maar – nog erger <v0>–subfebriel</v0>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/punctuation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 4,
+    "source": "На ночь Яша выпил две шипучих упсы, на всякий случай закапал нос нафтизином, хотя насморка пока не было, и попросил жену нарисовать ему на груди и спине сеточки из йода — чтобы не начался кашель.",
+    "translation": "Voor het naar bed gaan had Jasja twee bruistabletten genomen, voor de zekerheid zijn neus gedruppeld met Naftizine, hoewel hij niet verkouden was, en hij had zijn vrouw gevraagd om jodiumarceringen op zijn borst en rug te tekenen – zodat hij niet zou gaan hoesten.",
+    "model_output_json": {
+      "annotated_translation": "<v0>Voor het naar bed gaan</v0> had Jasja twee bruistabletten<v1></v1> genomen, voor de zekerheid zijn neus gedruppeld met Naftizine, <v2>hoewel hij niet verkouden was</v2>, en hij had zijn vrouw gevraagd om jodiumarceringen op zijn borst en rug te tekenen – zodat hij niet zou gaan hoesten.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "style/awkward"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 5,
+    "source": "",
+    "translation": "",
+    "model_output_json": {}
+  },
+  {
+    "line": 6,
+    "source": "И вот теперь Яша сидел в постели, завернувшись в одеяло, и чувствовал себя отвратительно.",
+    "translation": "En nu zat Jasja in bed, gewikkeld in een deken, en voelde zich buitengewoon beroerd.",
+    "model_output_json": {
+      "annotated_translation": "En nu zat Jasja in bed, gewikkeld in een deken, en voelde zich <v0>buitengewoon</v0> beroerd.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "accuracy/overtranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 7,
+    "source": "Его грудь и живот — да что там грудь и живот, все тело — словно были наполнены застывшей сладкой ватой.",
+    "translation": "Het was of borst en buik – oké, zijn hele lichaam – propvol gestolde zoete suikerspin zat.",
+    "model_output_json": {
+      "annotated_translation": "Het was <v0>of</v0> <v1></v1> borst en buik – <v3>oké</v3>, zijn hele lichaam – propvol gestolde zoete suikerspin <v2>zat</v2>.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "fluency/grammar"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/omission"
+        },
+        {
+          "severity": "Minor",
+          "category": "accuracy/mistranslation"
+        },
+        {
+          "severity": "Minor",
+          "category": "fluency/grammar"
+        }
+      ]
+    }
+  },
+  {
+    "line": 8,
+    "source": "Или холодным яблочным желе.",
+    "translation": "Of koude appelgelei.",
+    "model_output_json": {
+      "annotated_translation": "Of koude appelgelei.",
+      "errors": []
+    }
+  },
+  {
+    "line": 9,
+    "source": "Но главное — эта тишина…",
+    "translation": "Maar het ergste was die stilte...",
+    "model_output_json": {
+      "annotated_translation": "Maar <v0>het ergste</v0> was die stilte...",
+      "errors": [
+        {
+          "severity": "Major",
+          "category": "accuracy/mistranslation"
+        }
+      ]
+    }
+  },
+  {
+    "line": 10,
+    "source": "Эта странная тишина.",
+    "translation": "Die merkwaardige stilte.",
+    "model_output_json": {
+      "annotated_translation": "Die merkwaardige stilte.",
+      "errors": []
+    }
+  },
+  {
+    "line": 11,
+    "source": "Что-то в нем явно разладилось, и разладилось всерьез.",
+    "translation": "Er was duidelijk iets defect van binnen, en niet zo’n klein beetje ook.",
+    "model_output_json": {
+      "annotated_translation": "Er was duidelijk iets defect van binnen, en niet zo’n klein beetje ook.",
+      "errors": []
+    }
+  },
+  {
+    "line": 12,
+    "source": "Теперь нужно было найти ту сломавшуюся шестеренку, которая мешала всему сложному, порой барахлившему, но все же относительно слаженному механизму Яшиного тридцатипятилетнего тела нормально работать, —",
+    "translation": "Het was zaak het kapotte tandwieltje te vinden dat verantwoordelijk was voor de verstoring van het complexe, soms haperende maar over het algemeen goed functionerende mechanisme van zijn vijfendertigjarige lichaam –",
+    "model_output_json": {
+      "annotated_translation": "Het was zaak het kapotte tandwieltje te vinden dat verantwoordelijk was voor de verstoring van het complexe, soms haperende maar over het algemeen goed functionerende mechanisme van zijn vijfendertigjarige lichaam –",
+      "errors": []
+    }
+  },
+  {
+    "line": 13,
+    "source": "найти и устранить неполадку медикаментозными средствами.",
+    "translation": "de verstoring te vinden en het met medicamentaire middelen weg te nemen.",
+    "model_output_json": {
+      "annotated_translation": "de verstoring te vinden en het met <v0>medicamentaire</v0> middelen weg te nemen.",
+      "errors": [
+        {
+          "severity": "Minor",
+          "category": "terminology/inappropriate for context"
+        }
+      ]
+    }
+  }
+]

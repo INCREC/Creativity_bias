@@ -1,0 +1,122 @@
+[
+  {
+    "ucp": "fresh-washed",
+    "ucp_translation": "fresc",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "fair",
+    "ucp_translation": "radiant",
+    "annotation": "R"
+  },
+  {
+    "ucp": "fair … air",
+    "ucp_translation": "radiant… fragrant",
+    "annotation": "CSC"
+  },
+  {
+    "ucp": "there is a smell … in the air",
+    "ucp_translation": "(i la tulipa i el narcís) omplen l’aire fragant.",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "pours",
+    "ucp_translation": "a doll",
+    "annotation": "R"
+  },
+  {
+    "ucp": "bores through",
+    "ucp_translation": "s'obre pas",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "lathes",
+    "ucp_translation": "sanefes",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "lathes and planes",
+    "ucp_translation": "sanefes",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "cleaves",
+    "ucp_translation": "solca",
+    "annotation": "R"
+  },
+  {
+    "ucp": "flaws",
+    "ucp_translation": "imperfeccions",
+    "annotation": "R"
+  },
+  {
+    "ucp": "cracks it to",
+    "ucp_translation": "hi obri esquerdes",
+    "annotation": "R"
+  },
+  {
+    "ucp": "bright light",
+    "ucp_translation": "fulgor esplendorós",
+    "annotation": "R"
+  },
+  {
+    "ucp": "little spots of sunshine",
+    "ucp_translation": "tot de centelles",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "wobble deliciously",
+    "ucp_translation": "balanceig deliciós",
+    "annotation": "R"
+  },
+  {
+    "ucp": "whirring",
+    "ucp_translation": "titil·lant",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "reeling",
+    "ucp_translation": "tremolós",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "planes of light",
+    "ucp_translation": "sanefes de llum",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "jar",
+    "ucp_translation": "trontollen",
+    "annotation": "R"
+  },
+  {
+    "ucp": "sun-flawed",
+    "ucp_translation": "marcat de sol",
+    "annotation": "R"
+  },
+  {
+    "ucp": "beryl water",
+    "ucp_translation": "l'aigua de beril",
+    "annotation": "R"
+  },
+  {
+    "ucp": "too bright to bear",
+    "ucp_translation": "enlluerna de tan radiant",
+    "annotation": "R"
+  },
+  {
+    "ucp": "covers",
+    "ucp_translation": "em tapa",
+    "annotation": "R"
+  },
+  {
+    "ucp": "the sun spots",
+    "ucp_translation": "el sol centellejant",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "flaps",
+    "ucp_translation": "passa esbategant les ales",
+    "annotation": "R"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "ucp": "fresh-washed",
+    "ucp_translation": "kraakschoon",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "fair",
+    "ucp_translation": "licht",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "fair … air",
+    "ucp_translation": "licht … lucht",
+    "annotation": "R"
+  },
+  {
+    "ucp": "there is a smell … in the air",
+    "ucp_translation": "er hangt een geur … in de lucht",
+    "annotation": "R"
+  },
+  {
+    "ucp": "pours",
+    "ucp_translation": "stroomt",
+    "annotation": "R"
+  },
+  {
+    "ucp": "bores through",
+    "ucp_translation": "dringt door … in",
+    "annotation": "R"
+  },
+  {
+    "ucp": "lathes",
+    "ucp_translation": "balken",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "lathes and planes",
+    "ucp_translation": "balken en vlakken",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "cleaves",
+    "ucp_translation": "splijt",
+    "annotation": "R"
+  },
+  {
+    "ucp": "flaws",
+    "ucp_translation": "facetten",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "cracks it to",
+    "ucp_translation": "breekt … in",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "bright light",
+    "ucp_translation": "facetten van helder licht",
+    "annotation": "CSC"
+  },
+  {
+    "ucp": "little splots of sunshine",
+    "ucp_translation": "kleine vlekjes zonlicht",
+    "annotation": "R"
+  },
+  {
+    "ucp": "wobble deliciously",
+    "ucp_translation": "wiegelen heerlijk",
+    "annotation": "R"
+  },
+  {
+    "ucp": "whirring",
+    "ucp_translation": "tollen … in het rond",
+    "annotation": "R"
+  },
+  {
+    "ucp": "reeling",
+    "ucp_translation": "zwieren … in het rond",
+    "annotation": "R"
+  },
+  {
+    "ucp": "planes of light",
+    "ucp_translation": "lichtvlakken",
+    "annotation": "R"
+  },
+  {
+    "ucp": "jar",
+    "ucp_translation": "worden verstoord",
+    "annotation": "O"
+  },
+  {
+    "ucp": "sun-flawed",
+    "ucp_translation": "door de zon gefacetteerde",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "beryl water",
+    "ucp_translation": "berilwater",
+    "annotation": "R"
+  },
+  {
+    "ucp": "too bright to bear",
+    "ucp_translation": "te helder om te verdragen",
+    "annotation": "R"
+  },
+  {
+    "ucp": "covers",
+    "ucp_translation": "schermt me af",
+    "annotation": "R"
+  },
+  {
+    "ucp": "the sun spots",
+    "ucp_translation": "de zonnevlekjes",
+    "annotation": "R"
+  },
+  {
+    "ucp": "flaps",
+    "ucp_translation": "klapwiekt",
+    "annotation": "R"
+  }
+]

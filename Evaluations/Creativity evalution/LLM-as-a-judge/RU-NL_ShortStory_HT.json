@@ -1,0 +1,62 @@
+[
+  {
+    "ucp": "затемно",
+    "ucp_translation": "toen het nog donker was",
+    "annotation": "R"
+  },
+  {
+    "ucp": "Ныли все cуставы и мышцы",
+    "ucp_translation": "al zijn gewrichten en spieren deden pijn",
+    "annotation": "R"
+  },
+  {
+    "ucp": "накатывала ...слабость",
+    "ucp_translation": "weer overveiwl hem een vreselijke ziekte",
+    "annotation": "E"
+  },
+  {
+    "ucp": "шипучих упсы",
+    "ucp_translation": "twee paracetamol",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "закапал нос нафтизином,",
+    "ucp_translation": "druppels in zijn neus",
+    "annotation": "O"
+  },
+  {
+    "ucp": "сеточки из йода",
+    "ucp_translation": "jodium",
+    "annotation": "O"
+  },
+  {
+    "ucp": "Его грудь и живот — да что там грудь и живот",
+    "ucp_translation": "zijn borst en buik - nee, zijn hele liijf",
+    "annotation": "R"
+  },
+  {
+    "ucp": "тишина, эта странная тишина",
+    "ucp_translation": "die vreemde stilte",
+    "annotation": "R"
+  },
+  {
+    "ucp": "Что-то в нем явно разладилось",
+    "ucp_translation": "er was duidelijk iets ontregeld daarbinnen",
+    "annotation": "R"
+  },
+  {
+    "ucp": "разладилось, и разладилось",
+    "ucp_translation": "en behoorlijk ook",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "сложному порой барахлившему, но все же относительно слаженному механизму Яшиного тридцатипятилетнего тела",
+    "ucp_translation": "verhinderde dat het ingewikkelde, soms haperende, maar alles bij elkaar toch relatief goed werkende mechanisme van zijn vijfendertigjarige lichaam normaal functioneerde",
+    "annotation": "R"
+  },
+  {
+    "ucp": "устранить неполадку медикаментозными средствами",
+    "ucp_translation": "het mankement … met medicamenteuze middelen verhelpen",
+    "annotation": "R"
+  }
+]

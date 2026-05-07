@@ -1,0 +1,122 @@
+[
+  {
+    "ucp": "fresh-washed",
+    "ucp_translation": "rentat de nou",
+    "annotation": "R"
+  },
+  {
+    "ucp": "fair",
+    "ucp_translation": "clar",
+    "annotation": "R"
+  },
+  {
+    "ucp": "fair … air",
+    "ucp_translation": "clar, i l’aire fa olor de tulipes i narcisos",
+    "annotation": "R"
+  },
+  {
+    "ucp": "there is a smell … in the air",
+    "ucp_translation": "i l’aire fa olor…",
+    "annotation": "R"
+  },
+  {
+    "ucp": "pours",
+    "ucp_translation": "a raig",
+    "annotation": "R"
+  },
+  {
+    "ucp": "bores through",
+    "ucp_translation": "forada",
+    "annotation": "R"
+  },
+  {
+    "ucp": "lathes",
+    "ucp_translation": "làmines",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "lathes and planes",
+    "ucp_translation": "làmines i plans",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "cleaves",
+    "ucp_translation": "l'esberla",
+    "annotation": "R"
+  },
+  {
+    "ucp": "flaws",
+    "ucp_translation": "clivella",
+    "annotation": "R"
+  },
+  {
+    "ucp": "cracks it to",
+    "ucp_translation": "clivella",
+    "annotation": "R"
+  },
+  {
+    "ucp": "bright light",
+    "ucp_translation": "llum viva",
+    "annotation": "R"
+  },
+  {
+    "ucp": "little spots of sunshine",
+    "ucp_translation": "pètals menuts de sol",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "wobble deliciously",
+    "ucp_translation": "tremolen delitós",
+    "annotation": "E"
+  },
+  {
+    "ucp": "whirring",
+    "ucp_translation": "els faig giravoltar",
+    "annotation": "R"
+  },
+  {
+    "ucp": "reeling",
+    "ucp_translation": "vacil·lar",
+    "annotation": "R"
+  },
+  {
+    "ucp": "planes of light",
+    "ucp_translation": "plans de llum",
+    "annotation": "R"
+  },
+  {
+    "ucp": "jar",
+    "ucp_translation": "trontollen",
+    "annotation": "R"
+  },
+  {
+    "ucp": "sun-flawed",
+    "ucp_translation": "esberlada de sol",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "beryl water",
+    "ucp_translation": "l'aigua d'esmaragda",
+    "annotation": "CS"
+  },
+  {
+    "ucp": "too bright to bear",
+    "ucp_translation": "gairebé massa radiant per suportar",
+    "annotation": "R"
+  },
+  {
+    "ucp": "covers",
+    "ucp_translation": "m'amaga",
+    "annotation": "CSM"
+  },
+  {
+    "ucp": "the sun spots",
+    "ucp_translation": "taques de sol",
+    "annotation": "R"
+  },
+  {
+    "ucp": "flaps",
+    "ucp_translation": "fueteja l'aire",
+    "annotation": "CSC"
+  }
+]
