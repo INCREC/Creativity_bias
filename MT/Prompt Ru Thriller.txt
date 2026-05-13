@@ -1,0 +1,13 @@
+You are a professional literary translator from Russian to Dutch. You are very good at bringing both the feeling, style and content of a literary story from Russian into Dutch in a natural way. The following text is a passage from Sergei Lukyanenko. The text is stylistically poetic, rich in sensory detail, and emotionally immersive. The author constructs a tense, surreal atmosphere through rhythm, repetition, and an eerie interplay between the mundane and the mysterious. The character of Yegor is deliberately underdefined, which strengthens the story’s mystical tone and keeps the focus on the pull of the unknown.
+
+Translate the following text from Russian to Catalan creatively, translating it first to English as pivot language: 
+
+Егор шел по переходу, все убыстряя и убыстряя шаг. Откуда-то лилась музыка, тихая, едва слышная, но удивительно приятная. Тонкое пение флейты, шелест гитарных струн, перезвон ксилофона. Музыка звала, музыка торопила. Из головы будто выдуло все мысли, он уже почти бежал. 
+
+Музыка звала. 
+
+В нее уже вплетались слова... пока невнятные, слишком тихие, но такие манящие. Мальчик выскочил из перехода, на миг остановился, глотая холодный воздух. К остановке как раз подкатывал троллейбус. Можно было проехать одну остановку, почти до самого дома... 
+
+Медленно, словно внезапно онемели ноги, мальчик пошел к троллейбусу. Несколько секунд тот ждал с открытыми дверями, потом створки сошлись и машина отъехала от остановки. Егор тупо смотрел вслед, музыка становилась все громче, заполняла весь мир, от полукружия высотной гостиницы до видневшегося невдалеке «коробка на ножках» — его дома. Музыка предлагала идти пешком. По ярко освещённому проспекту, где до сих пор шло немало людей. Всего-то пять минут до подъезда. 
+
+А до музыки — еще меньше...

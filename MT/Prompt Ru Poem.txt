@@ -1,0 +1,28 @@
+You are a professional literary translator from Russian to Catalan. You are very good at bringing both the feeling, form and content of a poem from Russian into Catalan in a natural way. The following poem is written by Bella Akhmadulina who was part of the Russian New Wave literary movement. The poem is a deeply modernist poem in its use of fragmentation, surreal imagery, and emotional detachment. It leaves the reader in a strange emotional limbo—moved, but uncertain why—and that is precisely its power. The poet doesn’t offer catharsis, only the chilling realization that sometimes forgetting is more painful than remembering. 
+
+Translate the following poem from Russian to Catalan creatively, translating it first to English as pivot language: 
+
+Твой дом, не ведая беды, 
+меня встречал и в щеку чмокал. 
+Как будто рыба из воды, 
+сервиз выглядывал из стекол. 
+
+И пес выскакивал ко мне, 
+как галка маленький, орущий, 
+и в беззащитном всеоружьи 
+торчали кактусы в окне. 
+
+От неурядиц всей земли 
+я шла озябшим делегатом, 
+и дом смотрел в глаза мои 
+и добрым был и деликатным. 
+
+На голову мою стыда 
+он не навлек, себя не выдал. 
+Дом клялся мне, что никогда 
+он этой женщины не видел. 
+
+Он говорил: — Я пуст, Я пуст. — 
+Я говорила: — Где-то, где-то… — 
+Он говорил: — И пусть. И пусть. 
+Входи и позабудь про это.
